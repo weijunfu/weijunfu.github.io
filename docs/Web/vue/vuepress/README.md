@@ -73,3 +73,29 @@ VuePress 会在`http://localhost:8080`启动一个热重载的开发服务器。
 待更新……
 
 敬请期待！
+
+## VuePress 插件
+
+### back-to-top
+
+> 可快速返回页面顶部
+
+#### 安装
+
+```
+yarn add -D @vuepress/plugin-back-to-top
+```
+
+#### 使用
+
+在`.vuepress/config.js`中添加`plugins`:
+
+```
+module.exports = {
+  plugin: ['@vuepress/back-to-top']
+}
+```
+
+### last-updated
+
+如果你对时间格式没有特殊需求，按照默认即可，不需安装该插件。

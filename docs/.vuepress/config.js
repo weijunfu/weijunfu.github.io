@@ -77,5 +77,22 @@ module.exports = {
 
     sidebar: 'auto'
   },
-  plugins: ['@vuepress/back-to-top']
+  plugins: [
+    '@vuepress/back-to-top',
+    // 日期
+    ['@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+            const dayjs = require('dayjs')
+            let time = dayjs(timestamp, 'YYYY-MM-DD HH:mm')
+            console.log(':>', time)
+            return time
+        }
+      }
+    ],
+    // 搜索
+    ['@vuepress/search', {
+      searchMaxSuggestions: 10
+    }]
+  ]
 }
