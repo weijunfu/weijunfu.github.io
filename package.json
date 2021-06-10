@@ -1,0 +1,27 @@
+{
+  "name": "weijunfu.github.io",
+  "version": "1.0.0",
+  "description": "Coding And Lift",
+  "main": "app.js",
+  "scripts": {
+    "dev": "vuepress dev docs --temp .temp --no-cache",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weijunfu/weijunfu.github.io.git"
+  },
+  "keywords": [],
+  "author": "WeiJunfu <ijunfu@163.com> (https://weijunfu.github.io/)",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/weijunfu/weijunfu.github.io/issues"
+  },
+  "homepage": "https://github.com/weijunfu/weijunfu.github.io#readme",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "dayjs": "^1.10.5",
+    "vuepress": "^1.8.2"
+  }
+}
