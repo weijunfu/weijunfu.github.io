@@ -16,8 +16,9 @@ const  WebItems = [
     ]
   },
   {text:'Vue', items:[
-    {text:'Vue 2.x', link: '/Web/vue2'},
-    {text:'Vue 3.x', link: '/Web/vue3'}
+    {text:'Vue Press', link: '/Web/vue/vuepress/'},
+    {text:'Vue 2.x', link: '/Web/vue/vue2/'},
+    {text:'Vue 3.x', link: '/Web/vue/vue3/'}
   ]},
   {text:'小程序', link:'/Web/mini/',items:[
     {text:'微信小程序', link:'/Web/mini/wechat/'}
@@ -67,27 +68,14 @@ module.exports = {
   themeConfig: {
     base: '/',
     // logo: '/assets/img/logo.png',
-    // plugins: [
-    //   [
-    //     '@vuepress/last-updated',
-    //     {
-    //       transformer: (timestamp, lang) => {
-    //         const dayjs = require('dayjs')
-           
-    //         return dayjs(new Date(), 'YYYY-MM-DD HH:mm')
-    //       }
-    //     }
-    //   ]
-    // ],
+    lastUpdated: '更新时间',
     nav: [
       { text: '首页', link: '/' },
       { text: 'Web', link: '/Web/', items: WebItems },
       { text: 'Java', link: '/Java/' , items: JavaItems }
     ],
 
-    sidebar:  [
-      '/'
-    ]
+    sidebar: 'auto'
   },
   plugins: ['@vuepress/back-to-top']
 }
