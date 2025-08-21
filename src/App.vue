@@ -4,6 +4,7 @@
       <div class="logo">
         <img :src="Logo" alt="weijunfu,java,logo" />
       </div>
+      <FuNav />
     </header>
     <main class="layout-main flex flex-row">
       <aside class="layout-aside">
@@ -24,6 +25,7 @@
 <script setup lang="ts">
 
 import Logo from '@/assets/logo.svg';
+import FuNav from '@/layout/FuNav/index.vue';
 import AsideMenu from '@/components/AsideMenu/index.vue';
 import FuFooter from '@/layout/FuFooter/index.vue'
 
@@ -38,6 +40,8 @@ import FuFooter from '@/layout/FuFooter/index.vue'
     border-bottom: .1rem solid rgba(249, 215, 112, .5);
     .logo {
       margin-left: 2rem;
+      width: calc(10vw - 2rem);
+      min-width: 120px;
       img {
         width: 5vw;
         height: 5vw;
@@ -66,6 +70,7 @@ import FuFooter from '@/layout/FuFooter/index.vue'
       .layout-main {
         flex: 1;
         padding: .5rem 1rem;
+        max-width: 100vw;
       }
 
       .layout-footer {
