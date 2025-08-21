@@ -1,0 +1,14 @@
+<template>
+<div class="fu-footer w-full h-full flex flex-row justify-center items-center">
+    @ijunfu 2025
+</div>
+</template>
+<script setup lang="ts">
+
+</script>
+<style scoped lang="scss">
+.fu-footer {
+    background-color: rgba(249, 215, 112, .5);
+    color: #fff;
+}
+</style>
