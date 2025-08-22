@@ -1,0 +1,1 @@
+import{F as a}from"./index-BBSdwLsg.js";import{d as o,r as s,c,a as t,o as n}from"./index-CD9BZHPs.js";const r={class:"java"},i=o({__name:"index",setup(d){const e=s(".flex: { display: flex; }");return(l,_)=>(n(),c("div",r,[t(a,{language:"css",code:e.value},null,8,["code"])]))}});export{i as default};

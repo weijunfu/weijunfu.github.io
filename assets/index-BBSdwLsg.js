@@ -1,0 +1,2 @@
+import{d as r,r as c,f as l,w as d,c as i,g as o,e as u,t as g,n as f,P as p,o as m,_}from"./index-CD9BZHPs.js";const h={class:"line-numbers"},x=r({__name:"index",props:{code:{type:String,required:!0},language:{type:String,default:"javascript"}},setup(a){const n=a,t=c(null),s=()=>{t.value&&p.highlightElement(t.value)};return l(()=>{s()}),d(()=>n.code,()=>{s()}),(v,e)=>(m(),i("pre",h,[e[0]||(e[0]=o("    ",-1)),u("code",{ref_key:"codeRef",ref:t,class:f(`language-${a.language}`)},g(a.code),3),e[1]||(e[1]=o(`
+`,-1))]))}}),C=_(x,[["__scopeId","data-v-6a7a33bb"]]);export{C as F};
