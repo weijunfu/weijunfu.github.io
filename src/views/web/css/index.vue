@@ -107,7 +107,7 @@ li:last-of-type {
 ])
 
 
-function handleIndex(idx) {
+function handleIndex(idx: number) {
     index.value = idx
 }
 
