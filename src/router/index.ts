@@ -35,4 +35,11 @@ const router = createRouter({
     routes,
 })
 
+router.afterEach((to, from) => {
+    if (window?._hmt) {
+        // 向百度统计手动发送页面浏览事件
+        window?._hmt.push(['_trackPageview', to.fullPath]);
+    }
+})
+
 export default router
