@@ -35,10 +35,10 @@ const router = createRouter({
     routes,
 })
 
-router.afterEach((to, from) => {
-    if (window?._hmt) {
+router.afterEach((to) => {
+    if (window._hmt) {
         // 向百度统计手动发送页面浏览事件
-        window?._hmt.push(['_trackPageview', to.fullPath]);
+        window._hmt.push(['_trackPageview', to.fullPath]);
     }
 })
 
