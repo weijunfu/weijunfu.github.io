@@ -95,6 +95,7 @@ nav {
                 z-index: 9999;
                 transform: translateX(-50%);
                 background-color: var(--fu-tip-bg-color);
+                box-shadow: .2rem .2rem .1rem rgba(0, 0, 0, .2);
                 
                 dt {
                     padding: .1rem .5rem;
