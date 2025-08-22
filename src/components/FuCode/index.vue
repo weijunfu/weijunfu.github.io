@@ -35,15 +35,26 @@ watch(() => props.code, () => {
 })
 </script>
 <style>
+.code-toolbar {
+    width: 80%;
+    .toolbar {
+        .toolbar-item {
+            .copy-to-clipboard-button {
+                background-color: var(--fu-bg-color);
+                span {
+                    color: var(--fu-border-color);
+                
+                }
+            }
+        }
+    }
+    
+}
 /* 全局修复 */
-pre.line-numbers {
-    padding-left: 3.8em !important;
-    position: relative !important;
-    white-space: pre !important;
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background-color: #f0f0f0;
 }
 </style>
 <style scoped lang="scss">
-pre {
-    width: 80%;
-}
+
 </style>
