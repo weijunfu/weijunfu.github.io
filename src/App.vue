@@ -38,7 +38,6 @@ fill="currentColor" stroke="none">
 
 <script setup lang="ts">
 
-import Logo from '@/assets/logo.svg';
 import FuNav from '@/layout/FuNav/index.vue';
 import AsideMenu from '@/components/AsideMenu/index.vue';
 import FuFooter from '@/layout/FuFooter/index.vue'
