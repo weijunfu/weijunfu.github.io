@@ -1,8 +1,8 @@
 <template>
-<nav class="h-full flex flex-row items-center">
-    <dl class="h-full" v-for="item in list" :key="item.id">
-        <dt class="h-full">
-            <RouterLink class="h-full flex flex-row justify-center items-center" :to="item.url">
+<nav class="nav h-full flex flex-row items-center">
+    <dl class="nav-item h-full" v-for="item in list" :key="item.id">
+        <dt class="item h-full">
+            <RouterLink class="item-link h-full flex flex-row justify-center items-center" :to="item.url">
                 {{ item.title }}
             </RouterLink>
             <dl v-if="item.children">
@@ -68,22 +68,37 @@ const list = ref<Menu[]>([
 
 </script>
 <style scoped lang="scss">
-nav {
+.nav {
     flex: 1;
-    dl {
+    &-item {
         margin-right: 2rem;
         padding: .1rem .5rem;
 
         &:hover {
-            dt {
+            .item {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 10%;
+                    bottom: 10%;
+                    width: 80%;
+                    height: .2rem;
+                    background-color: var(--fu-border-color);
+                }
+
+                &-link {
+                    color: rgb(224, 38, 35);
+                }
+
                 dl {
                     display: block;
                 }
             }
         }
 
-        dt {
+        .item {
             position: relative;
+
             a {
                 color: var(--fu-border-color);
             }
