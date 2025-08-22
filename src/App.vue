@@ -50,6 +50,7 @@ import FuFooter from '@/layout/FuFooter/index.vue'
   &-header {
     height: 7.2rem;
     min-height: 72px;
+    background-color: #f2f2f2;
     .logo {
       margin-left: 2rem;
       width: calc(10vw - 2rem);
