@@ -1,5 +1,7 @@
 <template>
-<pre class="line-numbers"><code ref="codeRef" :class="`language-${language}`">{{ code }}</code></pre>
+<pre class="line-numbers">
+    <code ref="codeRef" :class="`language-${language}`">{{ code }}</code>
+</pre>
 </template>
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
@@ -32,6 +34,16 @@ watch(() => props.code, () => {
     highlightCode()
 })
 </script>
+<style>
+/* 全局修复 */
+pre.line-numbers {
+    padding-left: 3.8em !important;
+    position: relative !important;
+    white-space: pre !important;
+}
+</style>
 <style scoped lang="scss">
-
+pre {
+    width: 80%;
+}
 </style>

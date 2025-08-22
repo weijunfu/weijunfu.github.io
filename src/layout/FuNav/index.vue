@@ -84,7 +84,9 @@ nav {
 
         dt {
             position: relative;
-
+            a {
+                color: var(--fu-border-color);
+            }
             dl {
                 display: none;
                 position: absolute;
@@ -92,12 +94,12 @@ nav {
                 left: 50%;
                 z-index: 9999;
                 transform: translateX(-50%);
-                background-color: rgba(249, 215, 112, 1);
+                background-color: var(--fu-tip-bg-color);
                 
                 dt {
                     padding: .1rem .5rem;
                     a {
-                        color: #f0f0f0;
+                        color: var(--fu-border-color);
 
                         &:hover {
                             color: rgb(224, 38, 35);

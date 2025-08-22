@@ -63,20 +63,14 @@ const list = ref<Menu[]>([
 <style scoped lang="scss">
 .aside-menu {
     .menu-item {
-        // padding-left: 1rem;
-        &:nth-child(even) {
-            background-color: rgba(240, 130, 160, .2);
-        }
-        &:nth-child(odd) {
-            background-color: rgba(225, 108, 150, .2);
-        }
-        
+        background-color: var(--fu-border-color);
 
         .item-title {
             min-height: 3.2rem;
+            color: #fff;
+            
             &:hover {
                 cursor: pointer;
-                color: #fff;
                 background-color: rgba(183,208,122, .5);
             }
         }
