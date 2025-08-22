@@ -42,6 +42,9 @@ const list = ref<Menu[]>([
             }, 
             {
                 id: 23, title: 'JavaScript', url: '/web/js'
+            },
+            {
+                id: 24, title: 'TypeScript', url: '/web/ts'
             }
         ]
     }, {

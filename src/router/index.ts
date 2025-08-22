@@ -14,6 +14,8 @@ const routes = [
                 path: 'css', name: 'CSS', component: () => import('@/views/web/css/index.vue')
             },{
                 path: 'js', name: 'JavaScript', component: () => import('@/views/web/javascript/index.vue')
+            }, {
+                path: 'ts', name: 'TypeScript', component: () => import('@/views/web/typescript/index.vue')
             }
     ] },
     {

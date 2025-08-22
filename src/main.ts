@@ -7,10 +7,9 @@ import 'prismjs';
 import 'prismjs/themes/prism-tomorrow.css'; // 你可以选择其他主题，如 prism-tomorrow.css
 // 如果需要支持更多语言，可以按需引入
 import 'prismjs/components/prism-java'
-import 'prismjs/components/prism-python'
 import 'prismjs/components/prism-css'
-import 'prismjs/components/prism-clike'
 import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-typescript'
 import 'prismjs/components/prism-markup'
 // import 'prismjs/plugins/line-numbers/prism-line-numbers.js'
 // import 'prismjs/plugins/line-numbers/prism-line-numbers.css' // 如果需要行号插件
