@@ -27,6 +27,15 @@ const routes = [
                 path: 'redis', name: 'Redis', component: () => import('@/views/database/redis/index.vue')
             }
         ]
+    },{
+        path: '/tools',
+        name: 'Tools',
+        redirect: '/tools/docker',
+        children: [
+            {
+                path: 'docker', name: 'Docker', component: () => import('@/views/tools/docker/index.vue')
+            }
+        ]
     }
 ]
 

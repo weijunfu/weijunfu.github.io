@@ -55,6 +55,15 @@ const list = ref<Menu[]>([
                 id: '32', title: 'Redis', url: '/db/redis'
             }
         ]
+    }, {
+        id: 4,
+        title: 'Tools',
+        url: '/tools',
+        children: [
+            {
+                id: '41', title: 'Docker', url: '/tools/docker'
+            }
+        ]
     }
 ])
 
