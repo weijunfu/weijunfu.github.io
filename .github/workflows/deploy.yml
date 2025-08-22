@@ -26,9 +26,18 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        
     - name: Install pnpm
       run: npm install -g pnpm
+
     - name: Install dependencies
       run: pnpm install  # 或 pnpm ci（推荐用于CI）
+
     - name: Build project
       run: pnpm run build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
