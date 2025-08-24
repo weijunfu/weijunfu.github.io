@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 
 import './assets/style/fu.scss';
 import './assets/style/glob.scss';
+import '@fu-css/fu-css/dist/index.min.css';
 
 import 'prismjs';
 import 'prismjs/themes/prism-tomorrow.css'; // 你可以选择其他主题，如 prism-tomorrow.css

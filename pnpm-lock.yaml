@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fu-css/fu-css':
+        specifier: ^0.0.1
+        version: 0.0.1
       prismjs:
         specifier: ^1.30.0
         version: 1.30.0
@@ -220,6 +223,9 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fu-css/fu-css@0.0.1':
+    resolution: {integrity: sha512-CAiecobbMmpN3QUa16YFKkRvJcbDg06jkRmIF8XpxISLKbPxRDjY88pA7hv/dZJrCFqwxizX/sEJIkdCHjOrXQ==}
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
@@ -929,6 +935,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.9':
     optional: true
+
+  '@fu-css/fu-css@0.0.1': {}
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 

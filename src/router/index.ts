@@ -36,6 +36,9 @@ const routes = [
         children: [
             {
                 path: 'docker', name: 'Docker', component: () => import('@/views/tools/docker/index.vue')
+            },
+            {
+                path: 'fu', name: 'Fu CSS', component: () => import('@/views/tools/fucss/index.vue')
             }
         ]
     }

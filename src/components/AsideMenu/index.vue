@@ -65,6 +65,9 @@ const list = ref<Menu[]>([
         children: [
             {
                 id: '41', title: 'Docker', url: '/tools/docker'
+            }, 
+            {
+                id: '42', title: 'Fu CSS', url: '/tools/fu'
             }
         ]
     }
@@ -74,8 +77,10 @@ const list = ref<Menu[]>([
 
 <style scoped lang="scss">
 .aside-menu {
+    margin-top: .2rem;
+    box-shadow: .5rem .5rem .2rem rgba(0, 0, 0, .2);
     .menu-item {
-        background-color: var(--fu-border-color);
+        background-color: var(--color-primary);
 
         .item-title {
             min-height: 3.2rem;
@@ -83,7 +88,7 @@ const list = ref<Menu[]>([
             
             &:hover {
                 cursor: pointer;
-                background-color: rgba(183,208,122, .5);
+                background-color: var(--color-second);
             }
         }
     }

@@ -68,6 +68,11 @@ const list = ref<Menu[]>([
 
 </script>
 <style scoped lang="scss">
+
+:deep(dt) {
+    width: 12rem;
+}
+
 .nav {
     flex: 1;
     &-item {
@@ -87,7 +92,7 @@ const list = ref<Menu[]>([
                 }
 
                 &-link {
-                    color: rgb(224, 38, 35);
+                    color: var(--color-primary);
                 }
 
                 dl {
@@ -113,12 +118,13 @@ const list = ref<Menu[]>([
                 box-shadow: .2rem .2rem .1rem rgba(0, 0, 0, .2);
                 
                 dt {
-                    padding: .1rem .5rem;
                     a {
-                        color: var(--fu-border-color);
+                        padding: .1rem .5rem;
+                        color: var(--color-primary);
 
                         &:hover {
-                            color: rgb(224, 38, 35);
+                            color: var(--color-second);
+                            background-color: var(--color-primary);
                         }
                     }
                 }

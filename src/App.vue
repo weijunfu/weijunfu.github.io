@@ -50,7 +50,7 @@ import FuFooter from '@/layout/FuFooter/index.vue'
   &-header {
     height: 7.2rem;
     min-height: 72px;
-    background-color: #f2f2f2;
+    background: linear-gradient(30deg, var(--color-primary), var(--color-second), var(--color-primary));
     .logo {
       margin-left: 2rem;
       width: calc(10vw - 2rem);
@@ -63,7 +63,7 @@ import FuFooter from '@/layout/FuFooter/index.vue'
         border-radius: 50%;
         min-height: 32px;
         min-width: 32px;
-        color: var(--fu-border-color);
+        color: var(--color-white);
       }
     }
   }
@@ -89,8 +89,8 @@ import FuFooter from '@/layout/FuFooter/index.vue'
       }
 
       .layout-footer {
-        height: 6rem;
-        min-height: 60px;
+        height: 20rem;
+        min-height: 200px;
       }
     }
   }
