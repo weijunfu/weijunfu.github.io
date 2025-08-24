@@ -47,6 +47,16 @@ const routes = [
 const router = createRouter({
     history: createWebHashHistory(),
     routes,
+    scrollBehavior(to, from, savedPosition) {
+        console.log(from.fullPath)
+        if (to.hash) {
+            return {
+                el: to.hash,
+                behavior: 'smooth'
+            }
+        }
+        return savedPosition || { top: 0 }
+    }
 })
 
 router.afterEach((to) => {

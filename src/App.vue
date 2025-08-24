@@ -79,18 +79,18 @@ import FuFooter from '@/layout/FuFooter/index.vue'
 
     .layout-content {
       width: calc(100% - 10vw);
-      min-width: calc(100% - 200px);
+      min-width: calc(100% - 10vw);
+      min-height: 100%;
+      max-height: 100%;
 
+      $footerHeight: 2rem;
       .content {
-        padding: 1rem 2rem 5rem 2rem;
-        height: calc(100% - 6rem);
-        min-height: calc(100% - 60px);
-        overflow: auto;
+        height: calc(100% - $footerHeight);
       }
 
       .layout-footer {
-        height: 20rem;
-        min-height: 200px;
+        height: $footerHeight;
+        min-height: 20px;
       }
     }
   }

@@ -1,12 +1,15 @@
 <template>
-<div class="fu-css flex flex-row w-full">
-    <div class="fu-menu">
+<div class="fu-css flex flex-row w-full h-full">
+    <div class="fu-css-menu p2">
         <div class="fu-menu-item" v-for="item in list" :key="item.id">
-            <span class="block w-full text-left">
+            <RouterLink v-if="item.url" class="block w-full text-left" :to="item.url">
+                {{ item.title }}
+            </RouterLink>
+            <span v-else class="block w-full text-left">
                 {{ item.title }}
             </span>
             <ul class="fu-menu-child-item">
-                <li v-for="child in item.children" :key="child.id" class="pl-2">
+                <li v-for="child in item.children" :key="child.id" class="pl-1">
                     <RouterLink v-if="child.url" class="block w-full text-left" :to="child.url">
                         {{ child.title }}
                     </RouterLink>
@@ -14,7 +17,11 @@
             </ul>
         </div>
     </div>
-    <div class="fu-main">
+    <div class="fu-css-main p2">
+        <h2 id="color">Color</h2>
+        <div class="fu-card">
+            <FuColor />
+        </div>
         <h2 id="sizing">Sizing</h2>
         <div class="fu-card">
             <h3 id="width">width</h3>
@@ -218,7 +225,10 @@
 </div>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref,  } from 'vue';
+
+import FuColor from '@/module/fu-css/FuColor/index.vue';
+
 interface FuNav {
     id: string | number
     title: string
@@ -227,6 +237,11 @@ interface FuNav {
 }
 
 const list = ref<FuNav[]>([
+    {
+        id: 10,
+        title: 'Color',
+        url: '#color'
+    },
     {
         id: 100,
         title: 'Layout',
@@ -326,12 +341,20 @@ const list = ref<FuNav[]>([
 </script>
 <style scoped lang="scss">
 .fu-css {
-    .fu-menu {
-        width: 12rem;
-        min-height: 120px;
+    overflow-y: auto;
+    &-menu {
+        width: 15rem;
+        height: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+        .fu-menu-item {
+            padding: .2rem;
 
-        &-item {
-            padding: .2rem .4rem;
+            a {
+                &:hover {
+                    color: #aaa;
+                }
+            }
 
             ul {
                 list-style: none;
@@ -351,8 +374,11 @@ const list = ref<FuNav[]>([
         }
     }
 
-    .fu-main {
+    &-main {
         flex:1;
+        height: 100%;
+        max-height: 100%;
+        overflow-y: auto;
     }
 }
 </style>
