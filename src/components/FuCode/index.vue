@@ -52,7 +52,7 @@ watch(() => props.code, () => {
 }
 /* 全局修复 */
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
-    background-color: #f0f0f0;
+    background-color: #F0F0E0;
 }
 </style>
 <style scoped lang="scss">
