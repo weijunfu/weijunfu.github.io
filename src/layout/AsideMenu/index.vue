@@ -78,13 +78,11 @@ const list = ref<Menu[]>([
 <style scoped lang="scss">
 .aside-menu {
     margin-top: .2rem;
-    box-shadow: .5rem .5rem .2rem rgba(0, 0, 0, .2);
     .menu-item {
-        background-color: var(--color-primary);
 
         .item-title {
             min-height: 3.2rem;
-            color: #fff;
+            color: var(--fu-text-color);
             
             &:hover {
                 cursor: pointer;

@@ -88,7 +88,7 @@ const list = ref<Menu[]>([
                     bottom: 10%;
                     width: 80%;
                     height: .2rem;
-                    background-color: var(--fu-border-color);
+                    background-color: var(--color-second);
                 }
 
                 &-link {
@@ -105,7 +105,7 @@ const list = ref<Menu[]>([
             position: relative;
 
             a {
-                color: var(--fu-border-color);
+                color: var(--fu-text-color);
             }
             dl {
                 display: none;
@@ -114,17 +114,16 @@ const list = ref<Menu[]>([
                 left: 50%;
                 z-index: 9999;
                 transform: translateX(-50%);
-                background-color: var(--fu-tip-bg-color);
-                box-shadow: .2rem .2rem .1rem rgba(0, 0, 0, .2);
-                
+                box-shadow: 0 0.2rem .1rem rgba(0, 0, 0, .2);
+                background-color: #def0f0;
                 dt {
                     a {
                         padding: .1rem .5rem;
-                        color: var(--color-primary);
+                        color: var(--fu-text-color);
 
                         &:hover {
-                            color: var(--color-second);
-                            background-color: var(--color-primary);
+                            color: var(--color-white);
+                            background-color: var(--color-second);
                         }
                     }
                 }

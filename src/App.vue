@@ -39,7 +39,7 @@ fill="currentColor" stroke="none">
 <script setup lang="ts">
 
 import FuNav from '@/layout/FuNav/index.vue';
-import AsideMenu from '@/components/AsideMenu/index.vue';
+import AsideMenu from '@/layout/AsideMenu/index.vue';
 import FuFooter from '@/layout/FuFooter/index.vue'
 
 </script>
@@ -47,12 +47,11 @@ import FuFooter from '@/layout/FuFooter/index.vue'
 <style scoped lang="scss">
 .layout {
   font-size: 1.2rem;
-  background: linear-gradient(to bottom, #E0F7FA, #B2EBF2, #80DEEA, #4DD0E1, #00BCD4, #0D47A1);
-
+  background-color: #f0f0f0;
   &-header {
     height: 7.2rem;
     min-height: 72px;
-    // background: linear-gradient(30deg, var(--color-primary), var(--color-second), var(--color-primary));
+    background-color: #ebedef;
     .logo {
       margin-left: 2rem;
       width: calc(10vw - 2rem);
@@ -65,7 +64,7 @@ import FuFooter from '@/layout/FuFooter/index.vue'
         border-radius: 50%;
         min-height: 32px;
         min-width: 32px;
-        color: var(--color-white);
+        color: var(--fu-text-color);
       }
     }
   }
@@ -84,7 +83,7 @@ import FuFooter from '@/layout/FuFooter/index.vue'
       min-width: calc(100% - 10vw);
       min-height: 100%;
       max-height: 100%;
-
+      background-color: #fff;
       $footerHeight: 2rem;
       .content {
         padding: 1rem;
@@ -96,6 +95,7 @@ import FuFooter from '@/layout/FuFooter/index.vue'
       .layout-footer {
         height: $footerHeight;
         min-height: 20px;
+        background-color: #f4f6f7;
       }
     }
   }

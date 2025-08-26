@@ -8,7 +8,6 @@
 </script>
 <style scoped lang="scss">
 .fu-footer {
-    // background-color: var(--fu-border-color);
-    color: #fff;
+    color: var(--fu-text-color);
 }
 </style>

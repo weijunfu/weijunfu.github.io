@@ -20,15 +20,15 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    --color-primary: #5078BF;
-    --color-second: #80CDE7;
+    --color-primary: #43f;
+    --color-second: rgba(68,51,255,.5);
 
     // 文本颜色
     --fu-text-color: #222;
     // 背景颜色
     --fu-bg-color: #F9E0CA;
     // 边框颜色
-    --fu-border-color: #5078BF;
+    --fu-border-color: #222;
     // 弹窗背景色
     --fu-tip-bg-color: #80CDE7;
 
@@ -76,8 +76,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    border-bottom: .2rem solid var(--fu-border-color);
-    
     position: relative;
     padding-left: 1.5rem;
     
@@ -88,7 +86,7 @@ h2 {
         left: 0;
         width: 1rem;
         height: 1rem;
-        background: linear-gradient(30deg, var(--color-second), var(--color-primary));
+        background: linear-gradient(135deg, var(--color-second), var(--color-primary));
         transform: translateY(-50%);
     }
 
@@ -98,8 +96,8 @@ h2 {
         left: 0;
         bottom: 0;
         width: 100%;
-        height: .12rem;
-        background: linear-gradient(60deg, var(--color-primary) 20%, var(--color-second) 80%, var(--color-primary));
+        height: .2rem;
+        background: linear-gradient(235deg, #FDE68A, #F9A8D4, #F472B6, #E84855, #9B2335);
     }
 }
 
