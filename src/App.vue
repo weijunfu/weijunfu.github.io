@@ -87,7 +87,10 @@ import FuFooter from '@/layout/FuFooter/index.vue'
 
       $footerHeight: 2rem;
       .content {
+        padding: 1rem;
         height: calc(100% - $footerHeight);
+        max-height: calc(100% - $footerHeight);
+        overflow-y: auto;
       }
 
       .layout-footer {

@@ -114,7 +114,6 @@ function handleIndex(idx: number) {
 </script>
 <style scoped lang="scss">
 .css-box {
-    
     h2, h3 {
         margin-top: 1rem;
         color: var(--fu-border-color);
