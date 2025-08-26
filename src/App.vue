@@ -47,10 +47,12 @@ import FuFooter from '@/layout/FuFooter/index.vue'
 <style scoped lang="scss">
 .layout {
   font-size: 1.2rem;
+  background: linear-gradient(to bottom, #E0F7FA, #B2EBF2, #80DEEA, #4DD0E1, #00BCD4, #0D47A1);
+
   &-header {
     height: 7.2rem;
     min-height: 72px;
-    background: linear-gradient(30deg, var(--color-primary), var(--color-second), var(--color-primary));
+    // background: linear-gradient(30deg, var(--color-primary), var(--color-second), var(--color-primary));
     .logo {
       margin-left: 2rem;
       width: calc(10vw - 2rem);
