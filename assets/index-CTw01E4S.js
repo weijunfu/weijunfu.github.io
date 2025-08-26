@@ -1,4 +1,4 @@
-import{_ as r}from"./index.vue_vue_type_style_index_0_lang-BxMUB5iW.js";import{d as n,r as a,c as t,e as o,a as c,o as l}from"./index-CZCm60zM.js";const d={class:"typescript"},f=n({__name:"index",setup(p){const s=a(`
+import{_ as r}from"./index.vue_vue_type_style_index_0_lang-BzsHGv2m.js";import{d as n,r as a,c as t,b as o,a as c,o as l}from"./index-BaKh_xU2.js";const d={class:"typescript"},f=n({__name:"index",setup(p){const s=a(`
 interface Person {
     name: string;
     age: number;

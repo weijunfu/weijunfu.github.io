@@ -1,2 +1,0 @@
-import{d as r,r as l,f as i,w as c,c as d,g as n,e as g,t as u,n as f,P as m,o as p}from"./index-CZCm60zM.js";const h={class:"line-numbers"},k=r({__name:"index",props:{code:{type:String,required:!0},language:{type:String,default:"javascript"}},setup(t){const o=t,a=l(null),s=()=>{a.value&&m.highlightElement(a.value)};return i(()=>{s()}),c(()=>o.code,()=>{s()}),(x,e)=>(p(),d("pre",h,[e[0]||(e[0]=n("    ",-1)),g("code",{ref_key:"codeRef",ref:a,class:f(`language-${t.language}`)},u(t.code),3),e[1]||(e[1]=n(`
-`,-1))]))}});export{k as _};
