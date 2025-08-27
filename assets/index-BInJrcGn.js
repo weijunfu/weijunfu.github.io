@@ -1,4 +1,4 @@
-import{_ as f}from"./index.vue_vue_type_style_index_0_lang-DIlFpOiT.js";import{d as c,r as l,c as v,e as u,b as t,a as r,o as x,_ as p}from"./index-B234fg-O.js";const g={class:"css-box"},m={class:"flex flex-row"},b=c({__name:"index",setup(y){const n=l(`
+import{_ as f}from"./index.vue_vue_type_style_index_0_lang-Cxoz-h21.js";import{d as c,r as l,c as v,e as u,b as t,a as r,o as x,_ as p}from"./index-GhISqMKB.js";const g={class:"css-box"},m={class:"flex flex-row"},b=c({__name:"index",setup(y){const n=l(`
 <ul class="flex flex-row">
     <li></li>
     <li></li>

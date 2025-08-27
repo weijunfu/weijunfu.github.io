@@ -1,0 +1,1 @@
+import{_ as a}from"./index.vue_vue_type_style_index_0_lang-Cxoz-h21.js";import{d as o,r as s,c,a as n,o as t}from"./index-GhISqMKB.js";const r={class:"java"},m=o({__name:"index",setup(_){const e=s(".flex: { display: flex; }");return(l,d)=>(t(),c("div",r,[n(a,{language:"css",code:e.value},null,8,["code"])]))}});export{m as default};

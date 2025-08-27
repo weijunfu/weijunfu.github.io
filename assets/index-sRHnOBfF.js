@@ -1,4 +1,4 @@
-import{_ as o}from"./index.vue_vue_type_style_index_0_lang-DIlFpOiT.js";import{d as g,c as h,t as b,o as p,_ as m,r as e,b as t,a as l,e as s}from"./index-B234fg-O.js";const f={class:"fu-quote"},T=g({__name:"index",props:{content:{type:String,required:!0}},setup(r){return(a,u)=>(p(),h("blockquote",f,b(r.content),1))}}),n=m(T,[["__scopeId","data-v-6eb0cad1"]]),y={class:"html"},_=g({__name:"index",setup(r){const a=e(`<!DOCTYPE HTML>
+import{_ as o}from"./index.vue_vue_type_style_index_0_lang-Cxoz-h21.js";import{d as g,c as h,t as b,o as p,_ as m,r as e,b as t,a as l,e as s}from"./index-GhISqMKB.js";const f={class:"fu-quote"},T=g({__name:"index",props:{content:{type:String,required:!0}},setup(r){return(a,u)=>(p(),h("blockquote",f,b(r.content),1))}}),n=m(T,[["__scopeId","data-v-6eb0cad1"]]),y={class:"html"},_=g({__name:"index",setup(r){const a=e(`<!DOCTYPE HTML>
     <html lang="zh_CN">
     <head>
     <meta charset="UTF-8" />
