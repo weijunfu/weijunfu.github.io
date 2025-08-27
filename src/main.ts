@@ -22,11 +22,19 @@ import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard' // 复制功�
 import App from './App.vue'
 import Router from './router/index'
 
+// 组件
+import FuCode from './components/FuCode/index.vue';
+import FuQuote from './components/FuQuote/index.vue';
+
+// 指令
 import ToggleSubmenu from './directives/toggleSubmenu'
 
 const app = createApp(App)
 
 app.use(Router)
+
+app.component('FuCode', FuCode)
+app.component('FuQuote', FuQuote)
 
 app.directive('toggle-submenu', ToggleSubmenu)
 

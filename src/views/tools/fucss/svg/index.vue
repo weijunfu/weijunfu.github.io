@@ -1,6 +1,9 @@
 <template>
 <div class="fu-css-svg">
-    Hello SVG
+    <h2>SVG</h2>
+    <div class="svg">
+        <RouterView />
+    </div>
 </div>
 </template>
 <script setup lang="ts">

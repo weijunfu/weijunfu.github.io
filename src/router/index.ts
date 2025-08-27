@@ -51,7 +51,25 @@ const routes = [
                     {
                         path: 'svg',
                         name: 'FuCssSvg',
-                        component: () => import('@/views/tools/fucss/svg/index.vue')
+                        redirect: '/tools/fu/svg/fill',
+                        component: () => import('@/views/tools/fucss/svg/index.vue'),
+                        children: [
+                            {
+                                path: 'fill',
+                                name: 'SVGFill',
+                                component: () => import('@/views/tools/fucss/svg/fill/index.vue')
+                            },
+                            {
+                                path: 'stroke',
+                                name: 'SVGStroke',
+                                component: () => import('@/views/tools/fucss/svg/stroke/index.vue')
+                            },
+                            {
+                                path: 'width',
+                                name: 'SVGStrokeWidth',
+                                component: () => import('@/views/tools/fucss/svg/stroke-width/index.vue')
+                            }
+                        ]
                     },
                 ]
             }

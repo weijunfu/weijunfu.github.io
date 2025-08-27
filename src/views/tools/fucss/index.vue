@@ -46,7 +46,15 @@ const list = ref<FuNav[]>([
             {
                 id: 21,
                 title: "fill",
-                url: '#svg-fill'
+                url: '/tools/fu/svg/fill'
+            }, {
+                id: 22,
+                title: "stroke",
+                url: '/tools/fu/svg/stroke'
+            }, {
+                id: 23,
+                title: 'stroke-width',
+                url: '/tools/fu/svg/width'
             }
         ]
     }
