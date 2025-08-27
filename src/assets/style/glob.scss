@@ -112,7 +112,7 @@ table {
 
     tr {
         th {
-            background-color: var(--fu-border-color);
+            background-color: #226ee0;
             color: white;
             padding: 12px;
             font-weight: bold;
@@ -121,13 +121,22 @@ table {
         }
 
         td {
+            color: white;
             padding: 10px;
-            border-bottom: 1px solid var(--fu-border-color);
         }
 
         &:hover {
-            background-color: #f1f1f1;
+            background: linear-gradient(130deg, #8274FF, #FFEF72) !important;
+            background-color: #8dccff !important;
             cursor: pointer;
+        }
+
+        &:nth-of-type(odd) {
+            background: linear-gradient(130deg, #ff768D, #AEFFFB);
+        }
+
+        &:nth-of-type(even) {
+            background: linear-gradient(130deg, #FF74B7, #72FFBD);
         }
     }
 }
