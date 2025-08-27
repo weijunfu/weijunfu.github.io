@@ -78,7 +78,7 @@ const list = ref<Menu[]>([
     &-item {
         margin-right: 2rem;
         padding: .1rem .5rem;
-
+        background-color: inherit;
         &:hover {
             .item {
                 &::after {
