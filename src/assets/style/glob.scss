@@ -148,7 +148,7 @@ table {
 
 dl {
     padding: .5rem;
-    background-color: #f0f0f0;
+    background-color: rgba(0,0,0,.2);
 
     dt {
         font-weight: bold;
@@ -157,7 +157,11 @@ dl {
     dt + dd {
         margin-top: 1rem;
     }
-
+    dd {
+        code {
+            background-color: rgba(0,0,0,.3) !important;
+        }
+    }
     dd + dd {
         margin-top: 1rem;
     }
