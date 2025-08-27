@@ -1,8 +1,12 @@
 
+type ColorMap = {
+    [key: string]: string;
+};
+
 /**
  * SVG 属性
  */
-export const svgPropertyObject = {
+export const svgPropertyObject: ColorMap = {
     fill: 'fill',
     stroke: 'stroke',
 }
@@ -11,7 +15,7 @@ export const svgPropertyObject = {
 /**
  * 颜色相关属性
  */
-export const colorPropertyList = {
+export const colorPropertyList: ColorMap = {
     text: 'color',
     border: 'border-color',
     bg: 'background-color',
@@ -25,14 +29,14 @@ export const colorPropertyList = {
 /**
  * 颜色特殊值
  */ 
-export const otherColorValue = {
+export const otherColorValue: ColorMap = {
     none: 'none',
     inherit: 'inherit',
     current: 'currentColor',
     transparent: 'transparent'
 }
 
-export const blackAndWhite = {
+export const blackAndWhite: ColorMap = {
     black: '#000',
     white: '#fff'
 }
@@ -40,7 +44,7 @@ export const blackAndWhite = {
 /**
  * 红色
  */
-const redColor = {
+const redColor: ColorMap = {
     'red-50': 'oklch(0.971 0.013 7.38)',
     'red-100': 'oklch(0.936 0.032 17.717)',
     'red-200': 'oklch(0.885 0.062 18.334)',
@@ -57,7 +61,7 @@ const redColor = {
 /**
  * 橙色
  */
-const orangeColor = {
+const orangeColor: ColorMap = {
     'orange-50': 'oklch(0.98 0.016 73.684)',
     'orange-100': 'oklch(0.954 0.038 75.164)',
     'orange-200': 'oklch(0.901 0.076 70.697)',
@@ -74,7 +78,7 @@ const orangeColor = {
 /**
  * 琥珀色
  */
-const amberColor = {
+const amberColor: ColorMap = {
     'amber-50': 'oklch(0.987 0.022 95.277)',
     'amber-100': 'oklch(0.962 0.059 95.617)',
     'amber-200': 'oklch(0.924 0.12 95.746)',
@@ -91,7 +95,7 @@ const amberColor = {
 /**
  * 黄色
  */
-const yellowColor = {
+const yellowColor: ColorMap = {
     'yellow-50': 'oklch(0.987 0.026 102.212)',
     'yellow-100': 'oklch(0.973 0.071 103.193)',
     'yellow-200': 'oklch(0.945 0.129 101.54)',
@@ -108,7 +112,7 @@ const yellowColor = {
 /**
  * 石灰色；莱姆色
  */
-const limeColor = {
+const limeColor: ColorMap = {
     'lime-50': 'oklch(0.986 0.031 120.757)',
     'lime-100': 'oklch(0.967 0.067 122.328)',
     'lime-200': 'oklch(0.938 0.127 124.321)',
@@ -125,7 +129,7 @@ const limeColor = {
 /**
  * 绿色
  */
-const greenColor = {
+const greenColor: ColorMap = {
     'green-50': 'oklch(0.982 0.018 155.826)',
     'green-100': 'oklch(0.962 0.044 156.743)',
     'green-200': 'oklch(0.925 0.084 155.995)',
@@ -142,7 +146,7 @@ const greenColor = {
 /**
  * 翠绿色
  */
-const emeraldColor = {
+const emeraldColor: ColorMap = {
     'emerald-50': 'oklch(0.979 0.021 166.113)',
     'emerald-100': 'oklch(0.95 0.052 163.051)',
     'emerald-200': 'oklch(0.905 0.093 164.15)',
@@ -159,7 +163,7 @@ const emeraldColor = {
 /**
  * 蓝绿色
  */
-const tealColor = {
+const tealColor: ColorMap = {
     'teal-50': 'oklch(0.984 0.014 180.72)',
     'teal-100': 'oklch(0.953 0.051 180.801)',
     'teal-200': 'oklch(0.91 0.096 180.426)',
@@ -176,7 +180,7 @@ const tealColor = {
 /**
  * 青色
  */
-const cyanColor = {
+const cyanColor: ColorMap = {
     'cyan-50': 'oklch(0.984 0.019 200.873)',
     'cyan-100': 'oklch(0.956 0.045 203.388)',
     'cyan-200': 'oklch(0.917 0.08 205.041)',
@@ -193,7 +197,7 @@ const cyanColor = {
 /**
  * 天蓝色
  */
-const skyColor = {
+const skyColor: ColorMap = {
     'sky-50': 'oklch(0.977 0.013 236.62)',
     'sky-100': 'oklch(0.951 0.026 236.824)',
     'sky-200': 'oklch(0.901 0.058 230.902)',
@@ -210,7 +214,7 @@ const skyColor = {
 /**
  * 蓝色
  */
-const blueColor = {
+const blueColor: ColorMap = {
     'blue-50': 'oklch(0.97 0.014 254.604)',
     'blue-100': 'oklch(0.932 0.032 255.585)',
     'blue-200': 'oklch(0.882 0.059 254.128)',
@@ -227,7 +231,7 @@ const blueColor = {
 /**
  * 靛蓝色
  */
-const indigoColor = {
+const indigoColor: ColorMap = {
     'indigo-50': 'oklch(0.962 0.018 272.314)',
     'indigo-100': 'oklch(0.93 0.034 272.788)',
     'indigo-200': 'oklch(0.87 0.065 274.039)',
@@ -244,7 +248,7 @@ const indigoColor = {
 /**
  * 紫罗兰
  */
-const violetColor = {
+const violetColor: ColorMap = {
     'violet-50': 'oklch(0.969 0.016 293.756)',
     'violet-100': 'oklch(0.943 0.029 294.588)',
     'violet-200': 'oklch(0.894 0.057 293.283)',
@@ -261,7 +265,7 @@ const violetColor = {
 /**
  * 紫色
  */
-const purpleColor = {
+const purpleColor: ColorMap = {
     'purple-50': 'oklch(0.977 0.014 308.299)',
     'purple-100': 'oklch(0.946 0.033 307.174)',
     'purple-200': 'oklch(0.902 0.063 306.703)',
@@ -278,7 +282,7 @@ const purpleColor = {
 /**
  * 紫红色
  */
-const fuchsiaColor = {
+const fuchsiaColor: ColorMap = {
     'fuchsia-50': 'oklch(0.977 0.017 320.058)',
     'fuchsia-100': 'oklch(0.952 0.037 318.852)',
     'fuchsia-200': 'oklch(0.903 0.076 319.62)',
@@ -295,7 +299,7 @@ const fuchsiaColor = {
 /**
  * 粉红色
  */
-const pinkColor = {
+const pinkColor: ColorMap = {
     'pink-50': 'oklch(0.971 0.014 343.198)',
     'pink-100': 'oklch(0.948 0.028 342.258)',
     'pink-200': 'oklch(0.899 0.061 343.231)',
@@ -312,7 +316,7 @@ const pinkColor = {
 /**
  * 玫瑰红
  */
-const roseColor = {
+const roseColor: ColorMap = {
     'rose-50': 'oklch(0.969 0.015 12.422)',
     'rose-100': 'oklch(0.941 0.03 12.58)',
     'rose-200': 'oklch(0.892 0.058 10.001)',
@@ -329,7 +333,7 @@ const roseColor = {
 /**
  * 暗蓝灰色
  */
-const slateColor = {
+const slateColor: ColorMap = {
     'slate-50': 'oklch(0.984 0.003 247.858)',
     'slate-100': 'oklch(0.968 0.007 247.896)',
     'slate-200': 'oklch(0.929 0.013 255.508)',
@@ -346,7 +350,7 @@ const slateColor = {
 /**
  * 灰色
  */
-const grayColor = {
+const grayColor: ColorMap = {
     'gray-50': 'oklch(0.985 0.002 247.839)',
     'gray-100': 'oklch(0.967 0.003 264.542)',
     'gray-200': 'oklch(0.928 0.006 264.531)',
@@ -363,7 +367,7 @@ const grayColor = {
 /**
  * 银白色 & 蓝白色
  */
-const zincColor = {
+const zincColor: ColorMap = {
     'zinc-50': 'oklch(0.985 0 0)',
     'zinc-100': 'oklch(0.967 0.001 286.375)',
     'zinc-200': 'oklch(0.92 0.004 286.32)',
@@ -380,7 +384,7 @@ const zincColor = {
 /**
  * 自然色 & 素净色
  */
-const neutralColor = {
+const neutralColor: ColorMap = {
     'neutral-50': 'oklch(0.985 0 0)',
     'neutral-100': 'oklch(0.97 0 0)',
     'neutral-200': 'oklch(0.922 0 0)',
@@ -394,7 +398,7 @@ const neutralColor = {
     'neutral-950': 'oklch(0.145 0 0)'
 }
 
-const stoneColor = {
+const stoneColor: ColorMap = {
     'stone-50': 'oklch(0.985 0.001 106.423)',
     'stone-100': 'oklch(0.97 0.001 106.424)',
     'stone-200': 'oklch(0.923 0.003 48.717)',
@@ -408,7 +412,7 @@ const stoneColor = {
     'stone-950': 'oklch(0.147 0.004 49.25)'
 }
 
-export const colorList = [ 
+export const colorList: ColorMap[] = [ 
     redColor,
     orangeColor,
     amberColor,

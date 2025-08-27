@@ -26,15 +26,17 @@ interface StrokeWidth {
     value: string
 }
 
-const widthList = ref([0, 1, 1.5, 2, 3, 4, 6, 8])
+const widthList = ref<number[]>([0, 1, 1.5, 2, 3, 4, 6, 8])
 
 const list = ref<StrokeWidth[]>([])
 
 for(let w of widthList.value) {
 
+    const widthStr = String(w); // 统一转为字符串处理
+
     list.value.push({
-        key: `stroke-width-${w}`.replace('.', '_'),
-        value: `stroke-width: ${w};`
+        key: `stroke-width-${widthStr}`.replace('.', '_'),
+        value: `stroke-width: ${widthStr};`
     })
 }
 

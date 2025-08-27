@@ -47,8 +47,6 @@ for(let val in otherColorValue) {
 
 // stroke 黑白
 for(let key in blackAndWhite) {
-    console.log(key, blackAndWhite[key])
-
     strokeList.value.push({
         key: `stroke-${key}`,
         value: `stroke: var(--color-${key});`,
