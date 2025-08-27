@@ -38,7 +38,22 @@ const routes = [
                 path: 'docker', name: 'Docker', component: () => import('@/views/tools/docker/index.vue')
             },
             {
-                path: 'fu', name: 'Fu CSS', component: () => import('@/views/tools/fucss/index.vue')
+                path: 'fu', 
+                name: 'FuCSS', 
+                redirect: '/tools/fu/color',
+                component: () => import('@/views/tools/fucss/index.vue'),
+                children: [
+                    {
+                        path: 'color',
+                        name: 'FuCssColor',
+                        component: () => import('@/views/tools/fucss/color/index.vue')
+                    },
+                    {
+                        path: 'svg',
+                        name: 'FuCssSvg',
+                        component: () => import('@/views/tools/fucss/svg/index.vue')
+                    },
+                ]
             }
         ]
     }

@@ -28,7 +28,13 @@
         <tbody>
             <tr>
                 <td>color</td>
-                <td>text-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</td>
+                <td>
+                    <dl>
+                        <dd>text-white</dd>
+                        <dd>text-black</dd>
+                        <dd>text-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</dd>
+                    </dl>
+                </td>
                 <td>
                     <dl>
                         <dd>number: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950</dd>
@@ -40,7 +46,13 @@
             </tr>
             <tr>
                 <td>border-color</td>
-                <td>border-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</td>
+                <td>
+                    <dl>
+                        <dd>border-white</dd>
+                        <dd>border-black</dd>
+                        <dd>border-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</dd>
+                    </dl>
+                </td>
                 <td>
                     <dl>
                         <dd>number: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950</dd>
@@ -52,7 +64,13 @@
             </tr>
             <tr>
                 <td>background-color</td>
-                <td>bg-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</td>
+                <td>
+                    <dl>
+                        <dd>bg-white</dd>
+                        <dd>bg-black</dd>
+                        <dd>bg-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</dd>
+                    </dl>
+                </td>
                 <td>
                     <dl>
                         <dd>number: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950</dd>
@@ -64,7 +82,13 @@
             </tr>
             <tr>
                 <td>outline-color</td>
-                <td>outline-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</td>
+                <td>
+                    <dl>
+                        <dd>outline-white</dd>
+                        <dd>outline-black</dd>
+                        <dd>outline-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</dd>
+                    </dl>
+                </td>
                 <td>
                     <dl>
                         <dd>number: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950</dd>
@@ -76,7 +100,13 @@
             </tr>
             <tr>
                 <td>text-decoration-color</td>
-                <td>decoration-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</td>
+                <td>
+                    <dl>
+                        <dd>decoration-white</dd>
+                        <dd>decoration-black</dd>
+                        <dd>decoration-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</dd>
+                    </dl>
+                </td>
                 <td>
                     <dl>
                         <dd>number: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950</dd>
@@ -88,7 +118,13 @@
             </tr>
             <tr>
                 <td>accent-color</td>
-                <td>accent-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</td>
+                <td>
+                    <dl>
+                        <dd>accent-white</dd>
+                        <dd>accent-black</dd>
+                        <dd>accent-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</dd>
+                    </dl>
+                </td>
                 <td>
                     <dl>
                         <dd>number: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950</dd>
@@ -100,7 +136,13 @@
             </tr>
             <tr>
                 <td>caret-color</td>
-                <td>caret-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</td>
+                <td>
+                    <dl>
+                        <dd>caret-white</dd>
+                        <dd>caret-black</dd>
+                        <dd>caret-&lt;color&gt;-&lt;number&gt;[-alpha-&lt;alpha&gt;]</dd>
+                    </dl>
+                </td>
                 <td>
                     <dl>
                         <dd>number: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950</dd>
@@ -112,7 +154,7 @@
             </tr>
         </tbody>
     </table>
-    <h3>透明度</h3>
+    <h3>透明度(示例)</h3>
     <table>
         <thead>
             <tr>
