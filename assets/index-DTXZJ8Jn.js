@@ -1,0 +1,1 @@
+import{d as a,r as s,c,a as o,b as n,o as t}from"./index-CSH9uAsV.js";const l={class:"java"},i=a({__name:"index",setup(r){const e=s(".flex: { display: flex; }");return(_,d)=>(t(),c("div",l,[o(n,{language:"css",code:e.value},null,8,["code"])]))}});export{i as default};
