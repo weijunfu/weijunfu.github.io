@@ -1,4 +1,4 @@
-import { ColorMap } from '@/types/module/fu-css/index'
+import type { ColorMap } from '@/types/module/fu-css/index'
 
 /**
  * SVG 属性
