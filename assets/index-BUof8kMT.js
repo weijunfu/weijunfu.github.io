@@ -1,4 +1,4 @@
-import{d as y,r as a,c as T,f,e as t,a as l,g as s,h as r,o as j,_ as x}from"./index-CSH9uAsV.js";const b={class:"typescript"},J=y({__name:"index",setup(E){const u=a(`
+import{d as y,r as a,c as T,f,e as t,a as l,g as s,h as r,o as j,_ as x}from"./index-NyiyPPKA.js";const b={class:"typescript"},J=y({__name:"index",setup(E){const u=a(`
 interface Person {
     name: string;
     age: number;
