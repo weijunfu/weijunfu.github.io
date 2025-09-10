@@ -186,42 +186,6 @@ dl {
     padding-left: 1rem;
 }
 
-$scrollbar: .3rem;
-$scrollbarRadius: .15rem;
-
-/* 整个滚动条 */
-::-webkit-scrollbar {
-  width: $scrollbar; /* 竖向滚动条宽度 */
-  height: $scrollbar; /* 横向滚动条高度 */
-}
-
-/* 滚动条轨道 */
-::-webkit-scrollbar-track {
-    background: #f0f0f0;
-    border-radius: $scrollbarRadius;
-}
-
-/* 滚动条滑块（可拖动部分） */
-::-webkit-scrollbar-thumb {
-    background: #c0c0c0;
-    border-radius: $scrollbarRadius;
-}
-
-/* 滚动条滑块悬停状态 */
-::-webkit-scrollbar-thumb:hover {
-    background: #a0a0a0;
-}
-
-/* 滚动条两端按钮（可选，一般隐藏） */
-::-webkit-scrollbar-button {
-    display: none;
-}
-
-/* 滚动条角落（交汇处） */
-::-webkit-scrollbar-corner {
-    background: #e0e0e0;
-}
-
 .grid {
     display: grid;
 }
