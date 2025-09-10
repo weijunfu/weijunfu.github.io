@@ -1,4 +1,6 @@
-import type { ColorMap } from '@/types/module/fu-css/index'
+export interface ColorMap {
+    [key: string]: string;
+};
 
 /**
  * SVG 属性

@@ -3,26 +3,31 @@
 
     <h2 class="flex flex-row">伪选择器</h2>
     <table>
-        <tr>
-            <th>伪元素</th>
-            <th>说明</th>
-        </tr>
-        <tr>
-            <td><code>:first-of-type</code></td>
-            <td>选择第一个元素</td>
-        </tr>
-        <tr>
-            <td><code>:last-of-type</code></td>
-            <td>选择最后一个元素</td>
-        </tr>
-        <tr>
-            <td><code>:nth-of-type</code></td>
-            <td>从正序开始选择第N个元素</td>
-        </tr>
-        <tr>
-            <td><code>:nth-last-of-type</code></td>
-            <td>从倒序开始选择第N个元素</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>伪元素</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>:first-of-type</code></td>
+                <td>选择第一个元素</td>
+            </tr>
+            <tr>
+                <td><code>:last-of-type</code></td>
+                <td>选择最后一个元素</td>
+            </tr>
+            <tr>
+                <td><code>:nth-of-type</code></td>
+                <td>从正序开始选择第N个元素</td>
+            </tr>
+            <tr>
+                <td><code>:nth-last-of-type</code></td>
+                <td>从倒序开始选择第N个元素</td>
+            </tr>
+        </tbody>
+        
     </table>
 
     <h3 class="flex flex-row">示例</h3>
