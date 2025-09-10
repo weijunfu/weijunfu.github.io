@@ -24,6 +24,10 @@
     "paths": {
       "@/*": ["src/*"]
     },
+    "declaration": true,
+    "outDir": "./dist",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
   "include": ["vite.config.ts", "src", "src/**/*"]
 }
