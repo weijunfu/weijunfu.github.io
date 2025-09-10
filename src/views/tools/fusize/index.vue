@@ -35,6 +35,21 @@
       </tr>
     </tbody>
   </table>
+
+  <h2 class="subtitle-size">示例</h2>
+  <div class="example">
+    <h1 class="title-size">美文<span class="auxiliary-text-size">标题</span></h1>
+    <h2 class="subtitle-size">今天，给自己一个微笑<span class="auxiliary-text-size">副标题</span></h2>
+    <p class="text-size"><span class="auxiliary-text-size">正文</span>今天早上出门，阳光微斜，照在脸上，很暖。路上遇到一个外国朋友，我们相视一笑，很阳光，很舒心，很美好。突然发现生活中处处是美好。其实，每天一个微笑，总能带来幸运。</p>
+    <p class="text-size"><span class="auxiliary-text-size">正文</span>从今天起，不论你在做什么，不论你的身份是什么，不论你有没有犯过错，请记得，每天给自己一个微笑，给家人一个微笑，给别人一个微笑，让生活充满温暖。</p>
+    
+    <a href="https://weijunfu.github.io/" class="link-size">Home<span class="auxiliary-text-size">链接文本</span></a>
+
+    <button class="button-size">点击弹窗<span class="auxiliary-text-size">按钮文本</span></button>
+
+    <p class="card-title-size">卡片标题<span class="auxiliary-text-size">卡片标题</span></p>
+
+  </div>
 </div>
 </template>
 <script setup lang="ts">
@@ -70,5 +85,30 @@ const sizeList = ref<Size[]>([
 
 </script>
 <style scoped lang="scss">
+.auxiliary-text-size {
+  color: #d3d3d3;
+}
 
+button {
+  margin-top: 2rem;
+  padding: .5rem 1rem;
+  border: none;
+  background-color: purple;
+  color: #fff;
+  border-radius: .5rem;
+  width: 10rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a {
+  text-transform: uppercase;
+  color: purple;
+}
+
+.example {
+  display: flex;
+  flex-direction: column;
+}
 </style>
