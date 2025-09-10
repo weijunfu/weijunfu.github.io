@@ -1,7 +1,4 @@
-
-type ColorMap = {
-    [key: string]: string;
-};
+import { ColorMap } from '@/types/module/fu-css/index'
 
 /**
  * SVG 属性

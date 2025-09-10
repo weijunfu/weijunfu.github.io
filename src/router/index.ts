@@ -72,6 +72,11 @@ const routes = [
                         ]
                     },
                 ]
+            }, 
+            {
+                path: 'fu-size',
+                name: 'FuSize',
+                component: () => import('@/views/tools/fusize/index.vue')
             }
         ]
     }

@@ -1,12 +1,12 @@
 <template>
 <div class="aside-menu flex flex-column">
     <div class="menu-item flex flex-column justify-center" v-for="item in list" :key="item.id">
-        <RouterLink :to="item.url" class="item-title flex items-center pl-1">
+        <RouterLink :to="item.url" class="item-title flex items-center pl-1 link-size">
             {{ item.title }}
         </RouterLink>
         <div v-if="item.children" class="menu-children">
             <div class="menu-item flex flex-row items-center" v-for="child in item.children">
-                <RouterLink :to="child.url"  class="item-title w-full flex items-center pl-2">
+                <RouterLink :to="child.url"  class="item-title w-full flex items-center pl-2 link-size">
                     {{ child.title }}
                 </RouterLink>
             </div>
@@ -68,6 +68,8 @@ const list = ref<Menu[]>([
             }, 
             {
                 id: '42', title: 'Fu CSS', url: '/tools/fu'
+            }, {
+                id: '43', title: 'Fu Size', url: '/tools/fu-size'
             }
         ]
     }

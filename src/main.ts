@@ -4,6 +4,8 @@ import './assets/style/fu.scss';
 import './assets/style/glob.scss';
 import '@fu-css/fu-css/dist/index.min.css';
 
+import '@fu-css/fu-size/style.min.css';
+
 import 'prismjs';
 import 'prismjs/themes/prism-tomorrow.css'; // 你可以选择其他主题，如 prism-tomorrow.css
 // 如果需要支持更多语言，可以按需引入
@@ -25,6 +27,7 @@ import Router from './router/index'
 // 组件
 import FuCode from './components/FuCode/index.vue';
 import FuQuote from './components/FuQuote/index.vue';
+import FuNote from './components/FuNote/index.vue';
 
 // 指令
 import ToggleSubmenu from './directives/toggleSubmenu'
@@ -34,7 +37,8 @@ const app = createApp(App)
 app.use(Router)
 
 app.component('FuCode', FuCode)
-app.component('FuQuote', FuQuote)
+    .component('FuNote', FuNote)
+    .component('FuQuote', FuQuote)
 
 app.directive('toggle-submenu', ToggleSubmenu)
 

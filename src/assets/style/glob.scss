@@ -42,15 +42,6 @@
     font-family: var(--font-family);
 }
 
-a {
-    font-weight: 500;
-    color: var(--fu-text-color);
-    text-decoration: inherit;
-    &:hover {
-        color: var(--fu-border-color);
-    }
-}
-
 body {
     margin: 0;
     display: flex;
@@ -59,7 +50,6 @@ body {
     height: 100vh;
     min-width: 320px;
     min-height: 800px;
-    font-size: 10px;
 }
 
 #app {
@@ -75,10 +65,14 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
 }
 
+h1 {
+    font-size: var(--font-size-title);
+}
+
 h2 {
     position: relative;
     padding-left: 1.5rem;
-    
+    font-size: var(--font-size-subtitle);
     &::before{
         content: '';
         position: absolute;
@@ -101,6 +95,16 @@ h2 {
     }
 }
 
+
+a {
+    font-weight: 500;
+    color: var(--fu-text-color);
+    text-decoration: inherit;
+    font-size: var(--font-size-link);
+    &:hover {
+        color: var(--fu-border-color);
+    }
+}
 
 table {
     width: 100%;
@@ -148,8 +152,7 @@ table {
 
 dl {
     padding: .5rem;
-    background-color: rgba(0,0,0,.2);
-
+    
     dt {
         font-weight: bold;
     }
@@ -218,7 +221,6 @@ $scrollbarRadius: .15rem;
 ::-webkit-scrollbar-corner {
     background: #e0e0e0;
 }
-
 
 .grid {
     display: grid;
