@@ -1,4 +1,4 @@
-import{d as i,r as l,c as b,f as v,e as t,a as s,b as f,o as u,_ as x}from"./index-NyiyPPKA.js";const p={class:"css-box"},g={class:"flex flex-row"},m=i({__name:"index",setup(y){const n=l(`
+import{d as i,r as l,c as b,f as v,e as t,a as s,b as f,o as u,_ as x}from"./index-DwkGIKLx.js";const p={class:"css-box"},g={class:"flex flex-row"},m=i({__name:"index",setup(y){const n=l(`
 <ul class="flex flex-row">
     <li></li>
     <li></li>
