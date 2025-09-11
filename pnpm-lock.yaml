@@ -17,6 +17,9 @@ importers:
       '@fu-css/fu-size':
         specifier: ^0.0.1
         version: 0.0.1
+      '@fu-css/fu-table-theme':
+        specifier: ^0.0.1
+        version: 0.0.1
       prismjs:
         specifier: ^1.30.0
         version: 1.30.0
@@ -238,6 +241,9 @@ packages:
 
   '@fu-css/fu-size@0.0.1':
     resolution: {integrity: sha512-r/Dk1TSbtJnRHkD23TXhMwAUDYTCi895zAPQ9H1A0vyVZ6mxT8CXW1gJ57y4lhKqnAZJV2/US0HwLqFNRComeA==}
+
+  '@fu-css/fu-table-theme@0.0.1':
+    resolution: {integrity: sha512-e+tFmOtdo97tN9+5qLtNg2egbznhZVQkB5gl/8n870JmBDq53VFExjBWmTmIw8+mFo47vGRMthB66bEGdJ7xTA==}
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
@@ -953,6 +959,8 @@ snapshots:
   '@fu-css/fu-scrollbar@0.0.1': {}
 
   '@fu-css/fu-size@0.0.1': {}
+
+  '@fu-css/fu-table-theme@0.0.1': {}
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 

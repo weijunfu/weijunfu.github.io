@@ -70,6 +70,8 @@ const list = ref<Menu[]>([
                 id: '42', title: 'Fu CSS', url: '/tools/fu'
             }, {
                 id: '43', title: 'Fu Size', url: '/tools/fu-size'
+            }, {
+                id: '44', title: 'Fu Table Theme', url: '/tools/fu-table-theme'
             }
         ]
     }
@@ -81,14 +83,20 @@ const list = ref<Menu[]>([
 .aside-menu {
     margin-top: .2rem;
     .menu-item {
-
         .item-title {
-            min-height: 3.2rem;
+            padding: .5rem 1rem;
             color: var(--fu-text-color);
-            
+            transition: .5s;
             &:hover {
                 cursor: pointer;
+                color: #fff;
                 background-color: var(--color-second);
+            }
+        }
+
+        .menu-children {
+            .menu-item {
+                margin-left: 1rem;
             }
         }
     }

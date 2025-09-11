@@ -77,6 +77,11 @@ const routes = [
                 path: 'fu-size',
                 name: 'FuSize',
                 component: () => import('@/views/tools/fusize/index.vue')
+            },
+            {
+                path: 'fu-table-theme',
+                name: 'FuTableTheme',
+                component: () => import('@/views/tools/fuTableTheme/index.vue')
             }
         ]
     }

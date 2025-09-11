@@ -12,6 +12,7 @@
     "@fu-css/fu-css": "^0.0.4",
     "@fu-css/fu-scrollbar": "^0.0.1",
     "@fu-css/fu-size": "^0.0.1",
+    "@fu-css/fu-table-theme": "^0.0.1",
     "prismjs": "^1.30.0",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"

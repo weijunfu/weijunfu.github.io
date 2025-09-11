@@ -7,7 +7,5 @@
 
 </script>
 <style scoped lang="scss">
-.fu-footer {
-    color: var(--fu-text-color);
-}
+
 </style>

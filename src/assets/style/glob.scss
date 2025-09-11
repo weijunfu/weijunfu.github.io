@@ -106,45 +106,6 @@ a {
     }
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse; /* 合并边框，避免双线 */
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    text-align: left;
-    margin: 20px 0;
-
-    tr {
-        th {
-            background-color: #226ee0;
-            color: white;
-            padding: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        td {
-            color: white;
-            padding: 10px;
-        }
-
-        &:hover {
-            background: linear-gradient(130deg, #8274FF, #FFEF72) !important;
-            background-color: #8dccff !important;
-            cursor: pointer;
-        }
-
-        &:nth-of-type(odd) {
-            background: linear-gradient(130deg, #ff768D, #AEFFFB);
-        }
-
-        &:nth-of-type(even) {
-            background: linear-gradient(130deg, #FF74B7, #72FFBD);
-        }
-    }
-}
-
 .line-code {
     padding: .2rem .5rem;
     background-color: rgba(0,0,0,.3);

@@ -6,6 +6,7 @@ import '@fu-css/fu-css/dist/index.min.css';
 
 import '@fu-css/fu-size/style.min.css';
 import '@fu-css/fu-scrollbar/style.min.css';
+import '@fu-css/fu-table-theme/style.min.css';
 
 import 'prismjs';
 import 'prismjs/themes/prism-tomorrow.css'; // 你可以选择其他主题，如 prism-tomorrow.css
