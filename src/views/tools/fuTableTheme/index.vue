@@ -60,7 +60,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 const themeRef = ref('light')
-function handleSelectChange(e) {
+function handleSelectChange(e: any) {
   themeRef.value = e.target.value
 }
 </script>
