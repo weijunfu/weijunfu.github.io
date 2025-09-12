@@ -32,7 +32,6 @@ import FuFooter from '@/layout/FuFooter/index.vue'
   }
 
   main {
-    padding: 1rem .5rem;
     grid-area: main;
     max-height: 100vh;
     
@@ -41,6 +40,7 @@ import FuFooter from '@/layout/FuFooter/index.vue'
     $footerHeight: 10rem;
     $contentHeight: calc(100vw - $footerHeight);
     .content {
+      padding: 1rem .5rem;
       height: $contentHeight;
       max-height: $contentHeight;
       overflow-y: auto;
@@ -48,7 +48,7 @@ import FuFooter from '@/layout/FuFooter/index.vue'
 
     .footer {
       height: $footerHeight;
-      background-color: #18191b;
+      background-color: var(--theme);
       color: #fff;
     }
   }
