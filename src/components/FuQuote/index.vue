@@ -24,7 +24,7 @@ defineProps({
     /* 内部留白 */
     padding: 1em 1.5em;
     /* 添加左边框，增加视觉分隔 */
-    border-left: 4px solid #007acc;
+    border-left: 4px solid var(--theme);
     /* 背景色（可选，增加层次感） */
     background-color: #f9f9f9;
     position: relative; 
@@ -33,7 +33,7 @@ defineProps({
     &::before {
         content: "\"";
         font-size: 4em;
-        color: #ccc;
+        color: var(--theme);
         position: absolute;
         left: 10px;
         top: 10px;

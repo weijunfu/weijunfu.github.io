@@ -1,10 +1,14 @@
 <template>
 <div class="aside-menu flex flex-column">
-    <div class="menu-item flex flex-column justify-center" v-for="item in list" :key="item.id">
-        <RouterLink :to="item.url" class="item-title flex items-center pl-1 link-size">
-            {{ item.title }}
+    <div class="menu-item flex flex-column justify-center" v-for="(item, index) in list" :key="item.id">
+        <RouterLink :to="item.url" 
+            :class="['item-title flex items-center justify-between pl-1 link-size', item.expand ? 'expand' : '']" 
+            @click="handleClick(index)"
+        >
+            <span>{{ item.title }}</span>
+            <span>{{ item.children && item.expand ? '-' : (item.children ? '+':'') }}</span>
         </RouterLink>
-        <div v-if="item.children" class="menu-children">
+        <div v-show="item.expand" :class="['menu-children']">
             <div class="menu-item flex flex-row items-center" v-for="child in item.children">
                 <RouterLink :to="child.url"  class="item-title w-full flex items-center pl-2 link-size">
                     {{ child.title }}
@@ -22,7 +26,8 @@ interface Menu {
     id: string | number
     title: string
     children?: Menu[]
-    url: string
+    url: string,
+    expand?: boolean
 }
 
 const list = ref<Menu[]>([
@@ -33,6 +38,7 @@ const list = ref<Menu[]>([
         id: 2, 
         title: 'Web',
         url: '/web',
+        expand: false,
         children: [
             {
                 id: 21, title: 'HTML', url: '/web/html'
@@ -51,6 +57,7 @@ const list = ref<Menu[]>([
         id: 3,
         title: 'Database',
         url: '/db',
+        expand: false,
         children: [
             {
                 id: '31', title: 'MySQL', url: '/db/mysql'
@@ -62,6 +69,7 @@ const list = ref<Menu[]>([
         id: 4,
         title: 'Tools',
         url: '/tools',
+        expand: false,
         children: [
             {
                 id: '41', title: 'Docker', url: '/tools/docker'
@@ -77,6 +85,11 @@ const list = ref<Menu[]>([
     }
 ])
 
+function handleClick(index: number) {
+    console.log(index)
+    list.value[index].expand = !list.value[index].expand
+}
+
 </script>
 
 <style scoped lang="scss">
@@ -91,10 +104,27 @@ const list = ref<Menu[]>([
                 cursor: pointer;
                 color: #fff;
                 background-color: var(--theme);
+
+                span {
+                    &:nth-child(2) {
+                        color: #fff;
+                    }
+                }
+            }
+
+            span {
+                &:nth-child(2) {
+                    color: var(--theme);
+                }
+            }
+
+            span + span {
+                margin-left: 1rem;
             }
         }
 
         .menu-children {
+            transition: 1s;
             .menu-item {
                 .item-title {
                     padding: .5rem 1rem .5rem 2rem;
