@@ -83,20 +83,22 @@ const list = ref<Menu[]>([
 .aside-menu {
     margin-top: .2rem;
     .menu-item {
+        transition: .5s; 
         .item-title {
             padding: .5rem 1rem;
             color: var(--fu-text-color);
-            transition: .5s;
             &:hover {
                 cursor: pointer;
                 color: #fff;
-                background-color: var(--color-second);
+                background-color: var(--theme);
             }
         }
 
         .menu-children {
             .menu-item {
-                margin-left: 1rem;
+                .item-title {
+                    padding: .5rem 1rem .5rem 2rem;
+                }
             }
         }
     }
