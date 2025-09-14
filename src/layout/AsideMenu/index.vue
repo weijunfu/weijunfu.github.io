@@ -32,7 +32,16 @@ interface Menu {
 
 const list = ref<Menu[]>([
     {
-        id: 1, title: 'Java', url: '/java'
+        id: 1, 
+        title: 'Java', 
+        url: '/java/index',
+        children: [
+            {
+                id: 11,
+                title: 'Linux部署',
+                url: '/java/linux'
+            }
+        ]
     }, 
     {
         id: 2, 

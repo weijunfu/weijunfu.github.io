@@ -139,3 +139,15 @@
 .text-right {
     text-align: right;
 }
+
+
+
+.list-style-none {
+    list-style: none;
+}
+
+ul {
+    li + li {
+        margin-top: .5em;
+    }
+}

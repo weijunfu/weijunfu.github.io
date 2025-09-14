@@ -30,6 +30,7 @@ import Router from './router/index'
 import FuCode from './components/FuCode/index.vue';
 import FuQuote from './components/FuQuote/index.vue';
 import FuNote from './components/FuNote/index.vue';
+import FuLineCode from './components/FuLineCode/index.vue';
 
 // 指令
 import ToggleSubmenu from './directives/toggleSubmenu'
@@ -38,9 +39,10 @@ const app = createApp(App)
 
 app.use(Router)
 
-app.component('FuCode', FuCode)
-    .component('FuNote', FuNote)
-    .component('FuQuote', FuQuote)
+app.component('FuCode', FuCode)                 // 代码块
+    .component('FuNote', FuNote)                // 注释
+    .component('FuQuote', FuQuote)              // 引用块
+    .component('FuLineCode', FuLineCode);       //  行代码
 
 app.directive('toggle-submenu', ToggleSubmenu)
 

@@ -2,7 +2,23 @@ import { createWebHistory, createRouter } from 'vue-router'
 
 const routes = [
     { path: '/', name: 'Home', component: () => import('@/views/index.vue') },
-    { path: '/java', name: 'Java', component: () => import('@/views/Java/index.vue') },
+    { 
+        path: '/java', 
+        name: 'Java', 
+        redirect: '/java/index',
+        children: [
+            {
+                path: 'index',
+                name: 'JavaHome',
+                component: () => import('@/views/Java/index.vue')
+            },
+            {
+                path: 'linux',
+                name: 'LinuxDeploy',
+                component: () => import('@/views/Java/LinuxDeploy/index.vue')
+            }
+        ]
+    },
     { 
         path: '/web', 
         name: 'Web', 
