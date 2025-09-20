@@ -27,8 +27,10 @@ import FuFooter from '@/layout/FuFooter/index.vue'
   display: grid;
   grid-template-areas: "navigation main";
   grid-template-columns: auto 1fr;
+  transition: 1s;
   aside {
     grid-area: navigation;
+    transition: 1s;
   }
 
   main {
@@ -43,6 +45,7 @@ import FuFooter from '@/layout/FuFooter/index.vue'
       padding: 1rem .5rem;
       height: $contentHeight;
       max-height: $contentHeight;
+      min-height: 40rem;
       overflow-y: auto;
     }
 

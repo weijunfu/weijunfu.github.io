@@ -16,6 +16,7 @@ import 'prismjs/components/prism-css'
 import 'prismjs/components/prism-javascript'
 import 'prismjs/components/prism-typescript'
 import 'prismjs/components/prism-markup'
+import 'prismjs/components/prism-yaml'
 // import 'prismjs/plugins/line-numbers/prism-line-numbers.js'
 // import 'prismjs/plugins/line-numbers/prism-line-numbers.css' // 如果需要行号插件
 

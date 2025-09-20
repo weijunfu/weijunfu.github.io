@@ -32,6 +32,17 @@ const routes = [
                 path: 'js', name: 'JavaScript', component: () => import('@/views/web/javascript/index.vue')
             }, {
                 path: 'ts', name: 'TypeScript', component: () => import('@/views/web/typescript/index.vue')
+            }, {
+                path: 'vue', name: 'Vue', component: () => import('@/views/web/vue/index.vue')
+            }, {
+                path: 'tools', 
+                name: 'WebTools',
+                redirect: '/web/tools/pnpm',
+                children: [
+                    {
+                        path: 'pnpm', name: 'PNPM', component: () => import('@/views/web/tools/pnpm/index.vue')
+                    }
+                ]
             }
     ] },
     {
