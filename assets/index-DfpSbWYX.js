@@ -1,1 +1,0 @@
-import{_ as o,c as n,o as s,e as r}from"./index-fCYFOO2G.js";const t={},a={class:"markdown"};function c(d,e){return s(),n("div",a,[...e[0]||(e[0]=[r("h2",null,"Markdown",-1)])])}const l=o(t,[["render",c]]);export{l as default};
