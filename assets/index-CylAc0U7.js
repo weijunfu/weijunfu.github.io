@@ -1,0 +1,21 @@
+import{d as a,r as e,c as m,e as l,h as g,a as o,g as n,f as i,o as p}from"./index-DHo9W2vy.js";const f={class:"markdown"},L=a({__name:"index",setup(F){const s=e(`
+我展示的是一级标题
+=================
+
+我展示的是二级标题
+-----------------
+`),k=e(`
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+`),M=e(`
+# 引言
+## 背景
+## 目标
+# 方法论
+## 数据收集
+## 分析方法
+`);return(H,d)=>{const t=i("FuLineCode"),u=i("FuCode"),w=i("FuQuote"),r=i("FuNote");return p(),m("div",f,[d[19]||(d[19]=l("h2",{class:"title"},"Markdown",-1)),l("ul",null,[l("li",null,[d[0]||(d[0]=n("Markdown是一种",-1)),o(t,{code:"轻量级标记语言"}),d[1]||(d[1]=n("，它允许人们使用易读易写的纯文本格式编写文档。",-1))]),d[6]||(d[6]=l("li",null,"2004年，由约翰·格鲁伯（John Gruber）创建Markdown语言。",-1)),l("li",null,[d[2]||(d[2]=n("Markdown的设计理念是“",-1)),o(t,{code:"易读易写"}),d[3]||(d[3]=n("”，让人们能够使用简单的纯文本格式来编写结构化文档。",-1))]),d[7]||(d[7]=l("li",null,"Markdown编写的文档可以导出HTML、Word、图像、PDF、等多种格式的文档。",-1)),l("li",null,[d[4]||(d[4]=n("Markdown文件的后缀为",-1)),o(t,{code:".md"}),d[5]||(d[5]=n(" 、",-1)),o(t,{code:".markdown"})])]),d[20]||(d[20]=g('<h3 class="subtitle">为什么选择Markdown？</h3><dl><dt>提高写作效率：</dt><dd>无需频繁使用鼠标进行格式设置，可以保持思路的连贯性。写作者可以专注于内容创作，而不被格式问题分散注意力。</dd><dt>降低学习门栏：</dt><dd>相比于 LaTeX、HTML 等标记语言，Markdown 的语法极其简单，大多数人可以在一小时内掌握基本用法。</dd><dt>广泛兼容性：</dt><dd>几乎所有的现代文本编辑器、代码编辑器、笔记应用都支持 Markdown。从简单的记事本到专业的 IDE，你都能找到 Markdown 的身影。</dd><dt>版本控制友好：</dt><dd>由于是纯文本格式，Markdown 文件可以很好地与 Git 等版本控制系统配合，便于追踪文档的修改历史和团队协作。</dd><dt>未来适应性：</dt><dd>即使特定的软件或平台消失，Markdown 文件作为纯文本仍然可以被访问和编辑，确保了内容的长期可用性。</dd></dl><h3 class="subtitle">Markdown的应用场景</h3><dl><dt>编写技术文档</dt><dd> 在软件开发领域，Markdown 已成为技术文档的标准格式。它特别适合： <ul><li>API 文档：清晰的标题层次和代码块展示，让 API 说明既专业又易读。许多 API 文档生成工具（如 Swagger）都支持 Markdown 格式的描述。</li><li>项目说明：从安装指南到使用手册，Markdown 能够有效组织技术信息。代码示例、配置文件、命令行操作都能得到恰当的展示。</li><li>开发规范：团队的编码规范、设计准则、工作流程等都可以用 Markdown 编写，方便团队成员查阅和更新。</li></ul></dd><dt>创作博客文章</dt><dd> 现代的博客平台和静态网站生成器大多支持 Markdown： <ul><li>内容管理：博主可以专注于内容创作，而不必担心复杂的 HTML 编码。文章的格式化通过简单的标记即可完成。</li><li>平台迁移：使用 Markdown 编写的文章可以轻松在不同平台间迁移，不会因为平台特有的格式而被锁定。</li><li>离线编写：可以在任何文本编辑器中离线编写文章，然后批量发布，提高了写作的灵活性。</li></ul></dd><dt>GitHub README文件</dt><dd> GitHub 平台广泛使用 Markdown，特别是项目的 README 文件： <ul><li>项目介绍：清晰展示项目的目的、特性、使用方法等关键信息。</li><li>安装指南：通过代码块和列表，提供详细的安装和配置步骤。</li><li>贡献指南：说明如何参与项目开发，包括代码规范、提交流程等。</li><li>问题跟踪：在 Issues 和 Pull Requests 中，开发者使用 Markdown 来描述问题、提供解决方案。</li></ul></dd><dt>笔记记录和知识管理</dt><dd> Markdown 正成为数字笔记的首选格式： <ul><li>学习笔记：支持数学公式、代码高亮、图表等多种内容类型，适合技术学习和知识整理。</li><li>会议记录：清晰的标题结构和列表格式，让会议要点一目了然。</li><li>知识库建设：企业和个人都在使用 Markdown 构建知识库，通过链接和标签组织信息。</li></ul></dd><dt>在线写作平台</dt><dd> 越来越多的写作平台开始支持 Markdown： <ul><li>GitHub、简书、知乎：这些平台的编辑器支持 Markdown 语法，让创作者能够快速格式化文章。</li><li>GitBook、Notion：专业的文档和笔记平台，原生支持 Markdown，提供强大的组织和协作功能。</li><li>静态博客生成器：Jekyll、Hugo、Hexo 等工具让用户能够用 Markdown 创建专业的网站。</li></ul></dd></dl><h3 class="subtitle">Markdown标题</h3>',5)),l("h4",null,[d[8]||(d[8]=n("1. 使用",-1)),o(t,{code:"="}),d[9]||(d[9]=n("和",-1)),o(t,{code:"-"}),d[10]||(d[10]=n("标记一级和二级标题",-1))]),o(u,{language:"markdown",code:s.value},null,8,["code"]),l("h4",null,[d[11]||(d[11]=n("2. 使用",-1)),o(t,{code:"#"}),d[12]||(d[12]=n("标记",-1))]),o(w,{content:"Markdown 使用 # 号来创建标题，这是从 HTML 的 <h1> 到 <h6> 标签概念演化而来的。"}),d[21]||(d[21]=n(" 使用 ",-1)),o(t,{code:"#"}),d[22]||(d[22]=n(" 号可表示 1-6 级标题，一级标题对应一个 ",-1)),o(t,{code:"#"}),d[23]||(d[23]=n(" 号，二级标题对应两个 ",-1)),o(t,{code:"#"}),d[24]||(d[24]=n(" 号，以此类推。 ",-1)),o(u,{language:"markdown",code:k.value},null,8,["code"]),o(r,{content:"符号与文字间的空格：# 号和标题文字之间必须有一个空格。这是标准的 Markdown 语法要求。"}),o(r,{content:"行首位置：# 号必须在行首，前面不能有其他字符（空格或制表符）。"}),o(r,{content:"唯一的一级标题：在一个文档中，通常只使用一个一级标题作为文档的主标题，这符合良好的文档结构规范。"}),d[25]||(d[25]=l("h4",null,"标题编号的最佳实践",-1)),l("dl",null,[d[15]||(d[15]=l("dt",null,"自动编号 vs 手动编号",-1)),l("dd",null,[d[13]||(d[13]=n(" 许多 Markdown 处理器和编辑器支持自动生成标题编号，因此在源码中通常不需要手动添加编号： ",-1)),o(u,{language:"md",code:M.value},null,8,["code"])]),d[16]||(d[16]=l("dt",null,"标题锚点",-1)),l("dd",null,[d[14]||(d[14]=n(" 大多数 Markdown 处理器会自动为标题创建锚点（anchor），便于页面内跳转： ",-1)),o(u,{language:"md",code:"[跳转到方法论部分](#方法论)"})]),d[17]||(d[17]=l("dt",null,"标题长度建议",-1)),d[18]||(d[18]=l("dd",null,[l("ul",null,[l("li",null,"保持标题简洁明了，一般不超过 10 个汉字或 20 个英文字符"),l("li",null,'使用描述性词语，避免模糊的标题如"其他"、"杂项"'),l("li",null,"可以使用冒号来分隔主题和副主题")])],-1))])])}}});export{L as default};
