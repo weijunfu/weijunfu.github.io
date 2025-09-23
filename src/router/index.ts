@@ -1,3 +1,4 @@
+import path from 'path'
 import { createWebHistory, createRouter } from 'vue-router'
 
 const routes = [
@@ -61,6 +62,13 @@ const routes = [
         name: 'Tools',
         redirect: '/tools/docker',
         children: [
+            {
+                path: 'editor', name: 'Editor', redirect: '/tools/editor/markdown', children: [
+                    {
+                        path: 'markdown', name: 'Markdown', component: () => import('@/views/tools/editor/Markdown/index.vue')
+                    }
+                ]
+            },
             {
                 path: 'docker', name: 'Docker', component: () => import('@/views/tools/docker/index.vue')
             },

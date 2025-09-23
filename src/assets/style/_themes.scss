@@ -1,0 +1,31 @@
+$ThemeColorMap: (
+    bg: #fffffc,
+    bg-hover: #ffc6ff,
+    primary-clear: #bdb2ff,
+    primary-dull: #bdb2ff,
+    primary-visible: #fdf6fd,
+    accent-clear: #ffadad,
+    accent-dull: #ffd6a5,
+    clear: #22223b,
+    dull: #4b498a,
+    duller: #b4e1ff
+);
+
+:root {
+    @each $key, $value in $ThemeColorMap {
+        --#{$key}: $value;
+    }
+}
+
+$white: #ffffff;
+
+$theme-colors: (
+    "light":      #dfdfe1,
+    "dark":       #000100,
+    "primary":    #6623b4,
+    "secondary":  #f863a4,
+    "info":       #c3c8c8,
+    "success":    #1bb670,
+    "warning":    #e5d118,
+    "danger":     #f52a0b,
+);

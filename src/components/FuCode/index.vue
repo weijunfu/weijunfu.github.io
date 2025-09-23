@@ -40,9 +40,9 @@ watch(() => props.code, () => {
     .toolbar {
         .toolbar-item {
             .copy-to-clipboard-button {
-                background-color: var(--fu-bg-color);
+                background-color: var(--theme);
                 span {
-                    color: var(--fu-border-color);
+                    color: #fff;
                 
                 }
             }

@@ -1,6 +1,6 @@
 <template>
 <div class="layout w-full h-full">
-  <aside>
+  <aside class="line-color-2">
     <Logo />
     <AsideMenu />
   </aside>
@@ -8,7 +8,7 @@
     <div class="content w-full">
       <router-view />
     </div>
-    <footer class="footer w-full">
+    <footer class="footer w-full line-color-3">
       <FuFooter />
     </footer>
   </main>
@@ -31,6 +31,7 @@ import FuFooter from '@/layout/FuFooter/index.vue'
   aside {
     grid-area: navigation;
     transition: 1s;
+    will-change: width, color, background;
   }
 
   main {
