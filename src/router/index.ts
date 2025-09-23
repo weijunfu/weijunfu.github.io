@@ -1,4 +1,3 @@
-import path from 'path'
 import { createWebHistory, createRouter } from 'vue-router'
 
 const routes = [
