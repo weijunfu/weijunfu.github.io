@@ -191,3 +191,10 @@ $grid-number: 2, 3, 4, 5, 6;
         grid-template-columns: repeat($num, 1fr);
     }
 }
+
+
+.fu-note {
+    & + & {
+        margin-top: 1rem;
+    }
+}
