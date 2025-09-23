@@ -1,6 +1,44 @@
 <template>
 <div class="css-box">
 
+    <h2 class="flex flex-row">倒影实现方案</h2>
+
+    <h3 class="flex flex-row">1.复制元素</h3>
+    <div class="reflection">
+        <div id="reflection1">
+            <img src="https://picsum.photos/id/368/400/300" alt="倒影1.复制元素 1">
+            <img src="https://picsum.photos/id/368/400/300" alt="倒影1.复制元素 2">
+        </div>
+        <div class="reflection-code ml-1 w-full">
+            <FuCode language="html" :code="reflectionHtml1" />
+            <FuCode language="css" :code="reflectionCss1" />
+        </div>
+    </div>
+
+    <h3 class="flex flex-row">2.伪元素</h3>
+    <div class="reflection">
+        <div id="reflection2">
+            <img src="https://picsum.photos/id/368/400/300" alt="倒影2.伪元素">
+        </div>
+
+        <div class="reflection-code ml-1 w-full">
+            <FuCode language="html" :code="reflectionHtml2" />
+            <FuCode language="css" :code="reflectionCss2" />
+        </div>
+    </div>
+    
+
+    <h3 class="flex flex-row">3. box-reflect</h3>
+    <div class="reflection">
+        <div id="reflection3">
+            <img src="https://picsum.photos/id/368/400/300" alt="倒影3.box-reflect">
+        </div>
+        <div class="reflection-code ml-1 w-full">
+            <FuCode language="html" :code="reflectionHtml3" />
+            <FuCode language="css" :code="reflectionCss3" />
+        </div>
+    </div>
+    
     <h2 class="flex flex-row">伪选择器</h2>
     <table>
         <thead>
@@ -54,6 +92,79 @@ interface CssCode {
     language: string
     code: string
 }
+
+const reflectionHtml1 = ref(`
+<div id="reflection1">
+    <img src="https://picsum.photos/id/368/400/300" alt="倒影1.复制元素 1">
+    <img src="https://picsum.photos/id/368/400/300" alt="倒影1.复制元素 2">
+</div>
+`);
+
+const reflectionCss1 = ref(`
+#reflection1 {
+    position: relative;
+    height: 38rem;
+    img {
+        &:nth-child(2) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform-origin: bottom center;
+            transform: scaleY(-1);  // 垂直翻转
+            mask-image: linear-gradient(to top, rgba(0,0,0,.5), transparent 80%, transparent);
+        }
+    }
+}
+`);
+
+const reflectionHtml2 = ref(`
+<div id="reflection2">
+    <img src="https://picsum.photos/id/368/400/300" alt="倒影2.伪元素">
+</div>
+`)
+const reflectionCss2 = ref(`
+#reflection2 {
+    position: relative;
+    height: 38rem;
+    width: 25rem;
+    img {
+        display: block;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 18.75rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: scaleY(-1);  // 垂直翻转
+        opacity: .3;
+        background: linear-gradient(to bottom, rgba(255,255,255,.5), rgba(255,255,255,0)),
+            url('https://picsum.photos/id/368/400/300') no-repeat center bottom;
+    }
+}
+`)
+
+const reflectionHtml3 = ref(`
+<div id="reflection3">
+    <img src="https://picsum.photos/id/368/400/300" alt="倒影3.box-reflect">
+</div>
+`)
+const reflectionCss3 = ref(`
+#reflection3 {
+    height: 38rem;
+    width: 25rem;
+    position: relative;
+
+    img {
+        width: 100%;
+        display: block;
+        -webkit-box-reflect: below 0 linear-gradient(to bottom, rgba(255,255,255,0), rgba(255, 255, 255, .5));
+        box-reflect: below 0 linear-gradient(to bottom, rgba(255,255,255,0), rgba(255, 255, 255, .5));
+    }
+}
+`)
 
 let code = 
 `
@@ -159,6 +270,61 @@ function handleIndex(idx: number) {
             &:last-of-type {
                 border-color: blanchedalmond;
             }
+        }
+    }
+
+    .reflection {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    #reflection1 {
+        position: relative;
+        height: 38rem;
+        img {
+            &:nth-child(2) {
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform-origin: bottom center;
+                transform: scaleY(-1);  // 垂直翻转
+                mask-image: linear-gradient(to top, rgba(0,0,0,.5), transparent 80%, transparent);
+            }
+        }
+    }
+
+    #reflection2 {
+        position: relative;
+        height: 38rem;
+        width: 25rem;
+        img {
+            display: block;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 18.75rem;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: scaleY(-1);  // 垂直翻转
+            opacity: .3;
+            background: linear-gradient(to bottom, rgba(255,255,255,.5), rgba(255,255,255,0)),
+                url('https://picsum.photos/id/368/400/300') no-repeat center bottom;
+        }
+    }
+
+    #reflection3 {
+        height: 38rem;
+        width: 25rem;
+        position: relative;
+
+        img {
+            width: 100%;
+            display: block;
+            -webkit-box-reflect: below 0 linear-gradient(to bottom, rgba(255,255,255,0), rgba(255, 255, 255, .5));
+            box-reflect: below 0 linear-gradient(to bottom, rgba(255,255,255,0), rgba(255, 255, 255, .5));
         }
     }
 }
