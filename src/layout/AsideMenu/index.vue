@@ -183,7 +183,7 @@ function handleThirdMenu(menu: Menu, url: string) {
 
             span {
                 &:nth-child(2) {
-                    color: var(--theme);
+                    color: #fff;
                 }
             }
 
