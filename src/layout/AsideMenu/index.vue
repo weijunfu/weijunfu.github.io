@@ -5,7 +5,7 @@
             :class="['item-title flex items-center justify-between pl-1 link-size', currentRootMenu?.id === item.id ? 'active':'']" 
             @click="handleRootMenu(item, item.url)"
         >
-            <span>{{ item.title }}</span>
+            <span> <i v-if="item.icon" :class="[item.icon]"></i>  {{ item.title }}</span>
             <span>{{ (item.children && item.id === currentRootMenu?.id) ? '-' : (item.children ? '+':'') }}</span>
         </div>
         <div v-show="item.children && item.id === currentRootMenu?.id" :class="['menu-children']">
@@ -41,6 +41,7 @@ const router = useRouter()
 
 interface Menu {
     id: string | number
+    icon?: string
     title: string
     children?: Menu[]
     url: string,
@@ -50,11 +51,13 @@ interface Menu {
 const list = ref<Menu[]>([
     {
         id: 0,
+        icon: 'ri-home-4-line',
         title: 'Home',
         url: '/'
     },
     {
         id: 1, 
+        icon: 'ri-java-line',
         title: 'Java', 
         url: '/java/index',
         children: [
@@ -67,6 +70,7 @@ const list = ref<Menu[]>([
     }, 
     {
         id: 2, 
+        icon: 'ri-global-line',
         title: 'Web',
         url: '/web',
         expand: false,
@@ -97,6 +101,7 @@ const list = ref<Menu[]>([
         ]
     }, {
         id: 3,
+        icon: 'ri-database-2-line',
         title: 'Database',
         url: '/db',
         expand: false,
@@ -109,6 +114,7 @@ const list = ref<Menu[]>([
         ]
     }, {
         id: 4,
+        icon: 'ri-tools-line',
         title: 'Tools',
         url: '/tools',
         expand: false,
