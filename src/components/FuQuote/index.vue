@@ -29,7 +29,8 @@ defineProps({
     background-color: #f9f9f9;
     position: relative; 
     padding-left: 3em; /* 为引号留出空间 */
-
+    width: 80%;
+    
     &::before {
         content: "\"";
         font-size: 4em;

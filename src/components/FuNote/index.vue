@@ -19,6 +19,7 @@ defineProps({
 <style scoped lang="scss">
 .fu-note {
     padding: 1rem 2rem;
+    width: 80%;
     .note-icon {
         svg {
             width: 1.5rem;
