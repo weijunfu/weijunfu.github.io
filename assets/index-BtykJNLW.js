@@ -1,4 +1,4 @@
-import{d as h,r as o,c as b,e,h as x,a as l,b as a,o as w,_ as y}from"./index-D2Fi-bNw.js";const k={class:"css-box"},C={class:"reflection"},N={class:"reflection-code ml-1 w-full"},$={class:"reflection"},H={class:"reflection-code ml-1 w-full"},B={class:"reflection"},S={class:"reflection-code ml-1 w-full"},V={class:"flex flex-row"},_=h({__name:"index",setup(I){const n=o(`
+import{d as h,r as o,c as b,e,h as x,a as l,b as a,o as w,_ as y}from"./index-1BSDNuUt.js";const k={class:"css-box"},C={class:"reflection"},N={class:"reflection-code ml-1 w-full"},$={class:"reflection"},H={class:"reflection-code ml-1 w-full"},B={class:"reflection"},S={class:"reflection-code ml-1 w-full"},V={class:"flex flex-row"},_=h({__name:"index",setup(I){const n=o(`
 <div id="reflection1">
     <img src="https://picsum.photos/id/368/400/300" alt="倒影1.复制元素 1">
     <img src="https://picsum.photos/id/368/400/300" alt="倒影1.复制元素 2">
