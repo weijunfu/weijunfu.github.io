@@ -1,6 +1,8 @@
 <template>
 <div class="css-box">
 
+    <h2>卡片</h2>
+    <Card1 />
     <h2 class="flex flex-row">倒影实现方案</h2>
 
     <h3 class="flex flex-row">1.复制元素</h3>
@@ -86,6 +88,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import FuCode from '@/components/FuCode/index.vue';
+import Card1 from '@/module/web/css/Card1/index.vue';
 
 interface CssCode {
     id: string | number
