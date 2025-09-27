@@ -1,4 +1,4 @@
-import{d as p,r as s,c as v,e as o,a as n,f as u,o as m,_ as f}from"./index-1BSDNuUt.js";const g={class:"javascrip"},F=p({__name:"index",setup(j){const d=s(`
+import{d as p,r as s,c as v,e as o,a as n,f as u,o as m,_ as f}from"./index-BxWKbSig.js";const g={class:"javascrip"},F=p({__name:"index",setup(j){const d=s(`
 eval('console.log("ijunfu")')
 `),a=s(`
 const code = 'console.log("ijunfu")'

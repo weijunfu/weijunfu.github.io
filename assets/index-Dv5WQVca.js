@@ -1,4 +1,4 @@
-import{d as p,r as s,c as u,e,a as d,h as r,f as a,o as m}from"./index-1BSDNuUt.js";const i={class:"box pnpm"},g=p({__name:"index",setup(P){const c=s(`
+import{d as p,r as s,c as u,e,a as d,h as r,f as a,o as m}from"./index-BxWKbSig.js";const i={class:"box pnpm"},g=p({__name:"index",setup(P){const c=s(`
 # pnpm-workspace.yaml
 packages:
   - 'packages/**'   # 存放编写的组件
