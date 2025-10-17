@@ -171,7 +171,7 @@ const timeline12 = ref(null);
 const timeline13 = ref(null);
 
 const position = ref({ x: 0, y: 0 });
-let draggable = null;
+const  draggable = ref<Draggable | null>(null);
 
 const animate = () => {
   gsap.to(boxRef.value, {
@@ -328,8 +328,8 @@ onMounted(() => {
 
 
 onUnmounted(() => {
-  if (draggable && draggable[0]) {
-    draggable[0].kill();
+  if (draggable.value) {
+    draggable.value.kill();
   }
 
   ScrollTrigger.getAll().forEach(t => t.kill());
