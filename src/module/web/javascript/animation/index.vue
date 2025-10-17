@@ -222,20 +222,22 @@ onMounted(() => {
     yoyo: true,
   });
  
-  timeline2.to(circleRef.value, {
-    duration: 3,
-    motionPath: {
-      path: pathRef2.value,
-      autoRotate: true,
-      alignOrigin: [0.5, 0.5],
-      curviness: 1,
-      type: "cubic",
-      resolution: 100,
-      align: pathRef2.value,
-    },
-    ease: "none",
-  });
-
+  if(pathRef2.value) {
+    timeline2.to(circleRef.value, {
+      duration: 3,
+      motionPath: {
+        path: pathRef2.value,
+        autoRotate: true,
+        alignOrigin: [0.5, 0.5],
+        curviness: 1,
+        type: "cubic",
+        resolution: 100,
+        align: pathRef2.value,
+      },
+      ease: "none",
+    });
+  }
+  
   gsap.to(textRef.value, {
     // duration: 5,
     repeat: -1,
