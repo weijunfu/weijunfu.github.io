@@ -33,6 +33,7 @@ import FuFooter from '@/layout/FuFooter/index.vue'
     grid-area: navigation;
     transition: 1s;
     will-change: width, color, background;
+    max-height: 100vh;
     $logoHeight: 10vh;
 
     .logo {

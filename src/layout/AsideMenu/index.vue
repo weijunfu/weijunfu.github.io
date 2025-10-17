@@ -3,14 +3,14 @@
     <div class="menu aside-menu flex flex-column">
         <div class="menu-item flex flex-column justify-center" v-for="item in list" :key="item.id">
             <div :to="item.url" 
-                :class="['item-title flex items-center justify-between pl-1 link-size', currentRootMenu?.id === item.id ? 'active':'']" 
+                :class="['item-title flex items-center justify-between pl-1 link-size hover', currentRootMenu?.id === item.id ? 'active':'']" 
                 @click="handleRootMenu(item, item.url)"
             >
                 <span> <i v-if="item.icon" :class="[item.icon]"></i>  {{ item.title }}</span>
                 <span>{{ (item.children && item.id === currentRootMenu?.id) ? '-' : (item.children ? '+':'') }}</span>
             </div>
             <div v-show="item.children && item.id === currentRootMenu?.id" :class="['menu-children']">
-                <div class="menu-item flex flex-column items-center" v-for="(child) in item.children" :key="child.id">
+                <div class="menu-item flex flex-column items-center hover" v-for="(child) in item.children" :key="child.id">
                     <div :to="child.url"   
                         :class="['item-title w-full flex items-center pl-2 link-size', currentSecondMenu?.id === child.id ? 'active': '']"
                         @click="handleSecondMenu(child, child.url)"
@@ -19,7 +19,7 @@
                         <span>{{ (child.children && child.id === currentSecondMenu?.id) ? '-' : (child.children ? '+':'') }}</span>
                     </div>
                     <div v-show="child.children && child.id === currentSecondMenu?.id" :class="['menu-children', 'sub-menu-child', 'w-full']">
-                        <div class="menu-item flex flex-row items-center w-full" v-for="childItem in child.children" :key="childItem.id">
+                        <div class="menu-item flex flex-row items-center w-full hover" v-for="childItem in child.children" :key="childItem.id">
                             <div :to="childItem.url" 
                                 :class="['item-title w-full flex items-center pl-2 link-size', currentThirdMenu?.id === childItem.id ? 'active' : '']"
                                 @click="handleThirdMenu(childItem, childItem.url)"
@@ -204,7 +204,7 @@ function handleThirdMenu(menu: Menu, url: string) {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #fff;
+        color: var(--text-color);
     }
 }
 .aside-menu {
@@ -219,7 +219,7 @@ function handleThirdMenu(menu: Menu, url: string) {
 
             span {
                 &:nth-child(2) {
-                    color: #fff;
+                    color: var(--text-color);
                 }
             }
 
