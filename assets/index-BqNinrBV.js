@@ -1,1 +1,0 @@
-import{_ as t,c as n,o as c,e as s,a as r,f as a}from"./index-ArTwdy8q.js";const _={},d={class:"fu-css-svg"},i={class:"svg"};function l(f,e){const o=a("RouterView");return c(),n("div",d,[e[0]||(e[0]=s("h2",null,"SVG",-1)),s("div",i,[r(o)])])}const m=t(_,[["render",l]]);export{m as default};

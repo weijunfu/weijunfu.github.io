@@ -1,4 +1,4 @@
-import{d as j,r as t,c as v,e as o,a as n,f as u,g as s,o as w}from"./index-ArTwdy8q.js";const S={class:"linux-deploy"},b={class:"list-style-none"},D={class:"list-style-none"},k=j({__name:"index",setup(R){const d=t(`
+import{d as j,r as t,c as v,e as o,a as n,f as u,g as s,o as w}from"./index-C_z7Ubcl.js";const S={class:"linux-deploy"},b={class:"list-style-none"},D={class:"list-style-none"},k=j({__name:"index",setup(R){const d=t(`
 # 假设你的 jar 在 /opt/myapp/myapp.jar
 sudo chown ijunfu:ijunfu /opt/myapp/myapp.jar
 sudo chmod 755 /opt/myapp/myapp.jar
