@@ -2,7 +2,7 @@
 <div class="layout w-full h-full">
   <aside class="line-color-2">
     <Logo />
-    <AsideMenu />
+    <AsideMenu class="aside-menu"/>
   </aside>
   <main class="flex flex-column h-full">
     <div class="content w-full">
@@ -28,10 +28,20 @@ import FuFooter from '@/layout/FuFooter/index.vue'
   grid-template-areas: "navigation main";
   grid-template-columns: auto 1fr;
   transition: 1s;
+  overflow-x: hidden;
   aside {
     grid-area: navigation;
     transition: 1s;
     will-change: width, color, background;
+    $logoHeight: 10vh;
+
+    .logo {
+      height: 10vh;
+    }
+
+    .aside-menu {
+      height: calc(100% - 10vh);
+    }
   }
 
   main {

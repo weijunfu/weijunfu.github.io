@@ -1,36 +1,43 @@
 <template>
-<div class="menu aside-menu flex flex-column">
-    <div class="menu-item flex flex-column justify-center" v-for="item in list" :key="item.id">
-        <div :to="item.url" 
-            :class="['item-title flex items-center justify-between pl-1 link-size', currentRootMenu?.id === item.id ? 'active':'']" 
-            @click="handleRootMenu(item, item.url)"
-        >
-            <span> <i v-if="item.icon" :class="[item.icon]"></i>  {{ item.title }}</span>
-            <span>{{ (item.children && item.id === currentRootMenu?.id) ? '-' : (item.children ? '+':'') }}</span>
-        </div>
-        <div v-show="item.children && item.id === currentRootMenu?.id" :class="['menu-children']">
-            <div class="menu-item flex flex-column items-center" v-for="(child) in item.children" :key="child.id">
-                <div :to="child.url"   
-                    :class="['item-title w-full flex items-center pl-2 link-size', currentSecondMenu?.id === child.id ? 'active': '']"
-                    @click="handleSecondMenu(child, child.url)"
-                >
-                    <span>{{ child.title }}</span>
-                    <span>{{ (child.children && child.id === currentSecondMenu?.id) ? '-' : (child.children ? '+':'') }}</span>
-                </div>
-                <div v-show="child.children && child.id === currentSecondMenu?.id" :class="['menu-children', 'sub-menu-child', 'w-full']">
-                    <div class="menu-item flex flex-row items-center w-full" v-for="childItem in child.children" :key="childItem.id">
-                        <div :to="childItem.url" 
-                            :class="['item-title w-full flex items-center pl-2 link-size', currentThirdMenu?.id === childItem.id ? 'active' : '']"
-                            @click="handleThirdMenu(childItem, childItem.url)"
-                        >
-                            {{ childItem.title }}
+<div class="aside__wrapper">
+    <div class="menu aside-menu flex flex-column">
+        <div class="menu-item flex flex-column justify-center" v-for="item in list" :key="item.id">
+            <div :to="item.url" 
+                :class="['item-title flex items-center justify-between pl-1 link-size', currentRootMenu?.id === item.id ? 'active':'']" 
+                @click="handleRootMenu(item, item.url)"
+            >
+                <span> <i v-if="item.icon" :class="[item.icon]"></i>  {{ item.title }}</span>
+                <span>{{ (item.children && item.id === currentRootMenu?.id) ? '-' : (item.children ? '+':'') }}</span>
+            </div>
+            <div v-show="item.children && item.id === currentRootMenu?.id" :class="['menu-children']">
+                <div class="menu-item flex flex-column items-center" v-for="(child) in item.children" :key="child.id">
+                    <div :to="child.url"   
+                        :class="['item-title w-full flex items-center pl-2 link-size', currentSecondMenu?.id === child.id ? 'active': '']"
+                        @click="handleSecondMenu(child, child.url)"
+                    >
+                        <span>{{ child.title }}</span>
+                        <span>{{ (child.children && child.id === currentSecondMenu?.id) ? '-' : (child.children ? '+':'') }}</span>
+                    </div>
+                    <div v-show="child.children && child.id === currentSecondMenu?.id" :class="['menu-children', 'sub-menu-child', 'w-full']">
+                        <div class="menu-item flex flex-row items-center w-full" v-for="childItem in child.children" :key="childItem.id">
+                            <div :to="childItem.url" 
+                                :class="['item-title w-full flex items-center pl-2 link-size', currentThirdMenu?.id === childItem.id ? 'active' : '']"
+                                @click="handleThirdMenu(childItem, childItem.url)"
+                            >
+                                {{ childItem.title }}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="menu-tools">
+        <i class="ri-menu-line"></i>
+    </div>
 </div>
+
 </template>
 
 <script setup lang="ts">
@@ -183,9 +190,25 @@ function handleThirdMenu(menu: Menu, url: string) {
 
 <style scoped lang="scss">
 @use "sass:color";
+.aside__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
 
+    .menu-tools {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+}
 .aside-menu {
-    margin-top: .2rem;
+    height: calc(100% - 10vh);
     .menu-item {
         transition: .5s; 
         .item-title {
