@@ -25,15 +25,6 @@
       <span ref="boxRef" @click="animate"></span>
     </div>
   </p>
-  <h2>Draggable 拖拽动画 – 交互体验升级</h2>
-  <p>
-    GSAP 的 Draggable 插件让拖拽交互变得简单而强大，支持触摸设备，性能卓越：
-    <div class="box2" ref="boxRef2">
-      <span >
-        X: {{ Math.round(position.x) }} Y: {{ Math.round(position.y) }}
-      </span>
-    </div>
-  </p>
   <h2>DrawSVG 插件 – SVG 路径动画</h2>
   <p>
     DrawSVG 插件让 SVG 路径绘制动画变得轻而易举，是创建复杂图形动画的利器：
@@ -143,7 +134,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
 import { gsap } from "gsap";
-import { Draggable } from "gsap/Draggable";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
@@ -151,7 +141,6 @@ import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // 注册拖拽插件
-gsap.registerPlugin(Draggable);
 gsap.registerPlugin(DrawSVGPlugin);
 gsap.registerPlugin(MorphSVGPlugin);
 gsap.registerPlugin(MotionPathPlugin);
@@ -171,7 +160,6 @@ const timeline12 = ref(null);
 const timeline13 = ref(null);
 
 const position = ref({ x: 0, y: 0 });
-const  draggable = ref<Draggable | null>(null);
 
 const animate = () => {
   gsap.to(boxRef.value, {
@@ -195,30 +183,6 @@ onMounted(() => {
     y: 50,
     ease: "power2.out",
   });
-
-  if(boxRef2.value) {
-    draggable = Draggable.create(boxRef.value, {
-      type: "x,y",
-      onDrag: function () {
-        position.value = {
-          x: this.x,
-          y: this.y,
-        };
-      },
-      onDragStart: function () {
-        gsap.to(this.target, {
-          scale: 1.1,
-          duration: 0.2,
-        });
-      },
-      onDragEnd: function () {
-        gsap.to(this.target, {
-          scale: 1,
-          duration: 0.2,
-        });
-      },
-    });
-  }
 
   gsap.fromTo(
     pathRef.value,
@@ -328,10 +292,6 @@ onMounted(() => {
 
 
 onUnmounted(() => {
-  if (draggable.value) {
-    draggable.value.kill();
-  }
-
   ScrollTrigger.getAll().forEach(t => t.kill());
 })
 </script>
