@@ -1,4 +1,4 @@
-import{d as p,r as s,c as v,e as o,a as n,f as u,o as f,_ as m}from"./index-YkOm6AK1.js";const g={class:"javascrip"},F=p({__name:"index",setup(j){const d=s(`
+import{d as p,r as s,c as v,e as o,a as n,f as u,o as f,_ as m}from"./index-DOZcYfgF.js";const g={class:"javascrip"},F=p({__name:"index",setup(j){const d=s(`
 eval('console.log("ijunfu")')
 `),a=s(`
 const code = 'console.log("ijunfu")'
