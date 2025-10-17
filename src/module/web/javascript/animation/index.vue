@@ -149,7 +149,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const boxRef = ref<HTMLElement|null>(null)
-const boxRef2 = ref<HTMLElement|null>(null)
 const pathRef = ref<HTMLElement|null>(null);
 const shapeRef = ref(null);
 
@@ -158,8 +157,6 @@ const textRef = ref(null);
 const timeline11 = ref(null);
 const timeline12 = ref(null);
 const timeline13 = ref(null);
-
-const position = ref({ x: 0, y: 0 });
 
 const animate = () => {
   gsap.to(boxRef.value, {
