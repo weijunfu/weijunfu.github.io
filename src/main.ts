@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 
 import './assets/style/fu.scss';
 import './assets/style/glob.scss';
@@ -41,7 +42,7 @@ import ToggleSubmenu from './directives/toggleSubmenu'
 
 const app = createApp(App)
 
-app.use(Router)
+app.use(Router).use(createPinia())
 
 app.component('FuCode', FuCode)                 // 代码块
     .component('FuNote', FuNote)                // 注释

@@ -7,26 +7,12 @@
 
 }
 
-/* 当用户系统偏好设置为暗模式时覆盖的颜色变量 */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #121212; /* 深灰色背景 */
-        --text-color: #FFFFFF;       /* 白色字体 */
-        --border-color: #333333;     /* 较浅的深色边框 */
-        --hover-background-color: #444;
-        --hover-text-color: #fff;
-    }
-}
-
-/* 当用户系统偏好设置为亮模式时，这里实际上重复了默认值，但可以用来覆盖或调整默认样式 */
-@media (prefers-color-scheme: light) {
-    :root {
-        --background-color: #FFFFFF; /* 白色背景 */
-        --text-color: #333;       /* 黑色字体 */
-        --border-color: #333;     /* 黑色边框 */
-        --hover-background-color: #E0E0E0;
-        --hover-text-color: #333;
-    }
+[data-theme=dark] {
+    --background-color: #121212; /* 深灰色背景 */
+    --text-color: #FFFFFF;       /* 白色字体 */
+    --border-color: #333333;     /* 较浅的深色边框 */
+    --hover-background-color: #444;
+    --hover-text-color: #fff;
 }
 
 .hover {

@@ -17,7 +17,7 @@
   &:hover {
     cursor: pointer;
     .logo-icon {
-      color: var(--theme);
+      color: var(--hover-text-theme);
     }
   }
   &-icon {
@@ -28,7 +28,7 @@
     border-radius: 50%;
     min-height: 32px;
     min-width: 32px;
-    color: var(--fu-text-color);
+    color: var(--text-color);
     transition: 1s;
   }
 }

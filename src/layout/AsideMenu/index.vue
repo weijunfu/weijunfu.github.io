@@ -34,6 +34,7 @@
     </div>
 
     <div class="menu-tools">
+        <FuTheme />
         <i class="ri-menu-line"></i>
     </div>
 </div>
@@ -43,6 +44,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+
+import FuTheme from '@/components/FuTheme/index.vue';
 
 const router = useRouter()
 
@@ -205,6 +208,8 @@ function handleThirdMenu(menu: Menu, url: string) {
         justify-content: center;
         align-items: center;
         color: var(--text-color);
+        font-size: 1.2rem;
+        
     }
 }
 .aside-menu {

@@ -14,6 +14,7 @@
     "@fu-css/fu-size": "^0.0.1",
     "@fu-css/fu-table-theme": "^0.0.1",
     "gsap": "^3.13.0",
+    "pinia": "^3.0.3",
     "prismjs": "^1.30.0",
     "remixicon": "^4.6.0",
     "vue": "^3.5.18",
