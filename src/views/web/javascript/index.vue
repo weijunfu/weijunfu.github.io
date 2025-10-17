@@ -1,7 +1,7 @@
 <template>
 <div class="javascrip">
   <h1>JavaScript</h1>
-
+  
   <h2>动态执行JavaScript方案</h2>
 
   <dl>

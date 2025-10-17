@@ -82,7 +82,14 @@ const list = ref<Menu[]>([
                 id: 22, title: 'CSS', url: '/web/css',
             }, 
             {
-                id: 23, title: 'JavaScript', url: '/web/js'
+                id: 23, title: 'JavaScript', url: '/web/js',
+                children: [
+                    {
+                        id: 231, title: 'GSAP', url: '/web/js/gsap'
+                    },{
+                        id: 232, title: 'GSAP-ScrollTrigger', url: '/web/js/ScrollTrigger'
+                    }
+                ]
             },
             {
                 id: 24, title: 'TypeScript', url: '/web/ts'

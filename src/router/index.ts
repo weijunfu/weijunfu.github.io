@@ -29,7 +29,20 @@ const routes = [
             },{
                 path: 'css', name: 'CSS', component: () => import('@/views/web/css/index.vue')
             },{
-                path: 'js', name: 'JavaScript', component: () => import('@/views/web/javascript/index.vue')
+                path: 'js', 
+                name: 'JavaScript', 
+                redirect: '/web/js/index',
+                children: [
+                    {
+                        path: 'index', name: 'JavaScriptHome', component: () => import('@/views/web/javascript/index.vue'),
+                    },
+                    {
+                        path: 'gsap', name: 'GSAP', component: () => import('@/module/web/javascript/animation/index.vue')
+                    },
+                    {
+                        path: 'ScrollTrigger', name: 'ScrollTrigger', component: () => import('@/module/web/javascript/gsap/GsapScrollTrigger.vue')
+                    }
+                ]
             }, {
                 path: 'ts', name: 'TypeScript', component: () => import('@/views/web/typescript/index.vue')
             }, {

@@ -20,6 +20,9 @@ importers:
       '@fu-css/fu-table-theme':
         specifier: ^0.0.1
         version: 0.0.1
+      gsap:
+        specifier: ^3.13.0
+        version: 3.13.0
       prismjs:
         specifier: ^1.30.0
         version: 1.30.0
@@ -572,6 +575,9 @@ packages:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+
+  gsap@3.13.0:
+    resolution: {integrity: sha512-QL7MJ2WMjm1PHWsoFrAQH/J8wUeqZvMtHO58qdekHpCfhvhSL4gSiz6vJf5EeMP0LOn3ZCprL2ki/gjED8ghVw==}
 
   has-flag@4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
@@ -1265,6 +1271,8 @@ snapshots:
 
   fsevents@2.3.3:
     optional: true
+
+  gsap@3.13.0: {}
 
   has-flag@4.0.0: {}
 

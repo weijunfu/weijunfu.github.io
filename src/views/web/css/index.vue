@@ -1,6 +1,14 @@
 <template>
 <div class="css-box">
 
+    <h2>动画</h2>
+    <div class="animation">
+        <Ani001 />
+
+        <Loading />
+
+        <Card001 />
+    </div>
     <h2>卡片</h2>
     <Card1 />
     <h2 class="flex flex-row">倒影实现方案</h2>
@@ -89,6 +97,9 @@
 import { ref } from 'vue'
 import FuCode from '@/components/FuCode/index.vue';
 import Card1 from '@/module/web/css/Card1/index.vue';
+import Ani001 from '@/module/web/css/animation/Ani001/index.vue';
+import Loading from '@/module/web/css/animation/Loading/index.vue';
+import Card001 from '@/module/web/css/animation/card/Card001/index.vue';
 
 interface CssCode {
     id: string | number
@@ -236,6 +247,17 @@ function handleIndex(idx: number) {
     h2, h3 {
         margin-top: 1rem;
         color: var(--fu-border-color);
+    }
+
+    .animation {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+
+        .css-animation {
+            flex-shrink: 0;
+        }
     }
 
     table {
