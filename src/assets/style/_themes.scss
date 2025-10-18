@@ -4,7 +4,7 @@
     --border-color: #333;         // 边框颜色
     --hover-background-color: #E0E0E0;
     --hover-text-color: #333;
-
+    --theme: #fff;
 }
 
 [data-theme=dark] {
@@ -13,6 +13,7 @@
     --border-color: #333333;     /* 较浅的深色边框 */
     --hover-background-color: #444;
     --hover-text-color: #fff;
+    --theme: #121212;
 }
 
 .hover {
