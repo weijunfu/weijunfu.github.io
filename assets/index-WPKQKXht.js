@@ -1,4 +1,4 @@
-import{d as m,r as l,c as d,e as s,a as e,f as r,g as p,o as g}from"./index-DOZcYfgF.js";const y={class:"vue"},S=m({__name:"index",setup(f){const u=l(`
+import{d as m,r as l,c as d,e as s,a as e,f as r,g as p,o as g}from"./index-D1snxmh9.js";const y={class:"vue"},S=m({__name:"index",setup(f){const u=l(`
 npm install pnpm -g # 全局安装pnpm
 pnpm init # 初始化package.json配置、私有库
 pnpm install vue typescript -D # 全局下添加依赖
