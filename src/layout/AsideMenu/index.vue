@@ -38,7 +38,7 @@
             <FuTheme />
         </div>
         <div class="tool-menu">
-            <i class="ri-menu-line"></i>
+            <i class="ri-menu-line hover"></i>
         </div>
         
     </div>
@@ -216,14 +216,9 @@ function handleThirdMenu(menu: Menu, url: string) {
         font-size: 1.2rem;
         
         .tool-menu {
-            margin-left: 1rem;
+            padding: 1rem 2rem;
             &:first-child {
                 margin-left: 0;
-            }
-
-            &:hover {
-                cursor: pointer;
-                color: var(--theme);
             }
         }
     }

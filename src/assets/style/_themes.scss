@@ -2,28 +2,27 @@
     --text-color: #333;                 // 文字颜色
     --background-color: #fff;           // 背景色
     --border-color: #333;         // 边框颜色
-    --hover-background-color: #E0E0E0;
+    --hover-background-color: #f0f0f0;
     --hover-text-color: #333;
-    --theme: #fff;
+    --theme: #9370DB;
+    --shadow: rgba(0, 0, 0, .6);
 }
 
 [data-theme=dark] {
     --background-color: #121212; /* 深灰色背景 */
     --text-color: #FFFFFF;       /* 白色字体 */
     --border-color: #333333;     /* 较浅的深色边框 */
-    --hover-background-color: #444;
+    --hover-background-color: #333333;
     --hover-text-color: #fff;
-    --theme: #121212;
+    --theme: #9370DB;
+    --shadow: rgba(255,255,255,.6);
 }
 
-.hover {
-    &:hover {
-        background-color: var(--hover-background-color);
-        color: var(--hover-text-color);
-    }
+.active,
+.hover:hover {
+    color: var(--theme);
 }
 
-.active {
-    background-color: var(--hover-background-color);
-    color: var(--hover-text-color);
+.hover:hover {
+    cursor: pointer;
 }

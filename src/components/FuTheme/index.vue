@@ -1,5 +1,5 @@
 <template>
-<div class="fu-theme">
+<div class="fu-theme hover">
   <i v-if="themeStore.isLight()" class="ri-sun-line" @click="handleClick"></i>
   <i v-else class="ri-moon-fill" @click="handleClick"></i>
 </div>

@@ -63,8 +63,7 @@ import FuFooter from '@/layout/FuFooter/index.vue'
 
     .footer {
       height: $footerHeight;
-      background-color: var(--theme);
-      color: #fff;
+      box-shadow: 0 .2rem .5rem var(--shadow);
     }
   }
 }

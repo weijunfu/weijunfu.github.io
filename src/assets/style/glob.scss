@@ -101,7 +101,7 @@ a {
 
 .line-code {
     padding: .2rem .5rem;
-    background-color: rgba(0,0,0,.3);
+    background-color: var(--border-color);
 }
 
 dl {
@@ -116,7 +116,7 @@ dl {
     }
     dd {
         code {
-            background-color: rgba(0,0,0,.3);
+            background-color: var(--border-color);
         }
     }
     dd + dd {
