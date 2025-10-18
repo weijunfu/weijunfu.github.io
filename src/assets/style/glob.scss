@@ -30,6 +30,12 @@
     --font-size-subtitle: 1.2rem;
 }
 
+// 禁用默认主题切换动画
+::view-transition-new(root),
+::view-transition-old(root) {
+    animation: none;
+}
+
 * {
     margin: 0;
     padding: 0;

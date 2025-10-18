@@ -25,6 +25,21 @@ export const useThemeStore = defineStore('theme', {
     applyTheme() {
       // document.documentElement.setAttribute('data-theme', this.currentTheme)
       
+      // 自定义主题切换动画
+      const transition = document.startViewTransition(() => {
+        document.documentElement.setAttribute('data-theme', this.currentTheme)
+      })
+
+      transition.ready.then(() => {
+        document.documentElement.animate({
+          clipPath: [`circle(0px at 0% 100%)`, `circle(100vmax at 0% 100%)`]
+        }, {
+          duration: 1000,
+          // fill: 'forwards',
+          pseudoElement: '::view-transition-new(root)'
+        })
+      }) 
+
       // 可选：保存到 localStorage
       localStorage.setItem('theme', this.currentTheme)
 

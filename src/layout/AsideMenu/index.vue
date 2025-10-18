@@ -34,8 +34,13 @@
     </div>
 
     <div class="menu-tools">
-        <FuTheme />
-        <i class="ri-menu-line"></i>
+        <div class="tool-menu">
+            <FuTheme />
+        </div>
+        <div class="tool-menu">
+            <i class="ri-menu-line"></i>
+        </div>
+        
     </div>
 </div>
 
@@ -210,6 +215,17 @@ function handleThirdMenu(menu: Menu, url: string) {
         color: var(--text-color);
         font-size: 1.2rem;
         
+        .tool-menu {
+            margin-left: 1rem;
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: var(--theme);
+            }
+        }
     }
 }
 .aside-menu {
