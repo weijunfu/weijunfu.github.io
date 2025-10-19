@@ -1,1 +1,0 @@
-import{_ as t,c as s,a as c,o}from"./index-DiWjbXzr.js";const r={},n={class:"typescript"};function a(_,e){return o(),s("div",n,[...e[0]||(e[0]=[c("h2",null,"TypeScript",-1)])])}const p=t(r,[["render",a]]);export{p as default};
