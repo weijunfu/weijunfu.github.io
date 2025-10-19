@@ -39,7 +39,7 @@ function generateRoutes() {
         routes.push({
             path: routePath,
             name: menuMeta.title,
-            component: modules[path]().then(m => m.default),
+            component: modules[path],
             meta: {
                 title: menuMeta.title,
                 icon: menuMeta.icon as string,

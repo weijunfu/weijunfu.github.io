@@ -56,7 +56,6 @@ import type { Menu } from '@/types/menu'
 const router = useRouter()
 
 const menu = menuStore.getMenu()
-console.log('menu', menu)
 
 const currentMenu = ref<Menu | null>(null)
 
@@ -79,7 +78,6 @@ function handleClick(item: Menu) {
 }
 
 function handleChildMenu(item: Menu) {
-    console.log(item)
     if(item.path) {
         router.push({
             path: item.path
