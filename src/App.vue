@@ -54,18 +54,16 @@ import FuFooter from '@/layout/FuFooter/index.vue'
     box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .2);
 
     $footerHeight: 1.6rem;
-    $contentHeight: calc(100vw - $footerHeight);
+    $contentHeight: calc(100% - $footerHeight);
     .content {
       padding: .2rem .1rem;
       height: $contentHeight;
       max-height: $contentHeight;
-      // min-height: 40rem;
       overflow-y: auto;
     }
 
     .footer {
       height: $footerHeight;
-      // box-shadow: 0 .2rem .5rem var(--shadow);
     }
   }
 }

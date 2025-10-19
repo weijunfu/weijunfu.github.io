@@ -27,7 +27,6 @@ const categoryList = ref<Category[]>([
 </script>
 <style scoped lang="scss">
 .home {
-    margin: 1rem auto;
  gap: .2rem .1rem;
 }
 </style>
