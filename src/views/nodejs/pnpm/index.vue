@@ -1,5 +1,5 @@
 <template>
-<h2>CSS</h2>
+<h2>PNPM</h2>
 </template>
 <script setup lang="ts">
 

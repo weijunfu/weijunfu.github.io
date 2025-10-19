@@ -13,7 +13,6 @@
 </script>
 <style scoped lang="scss">
 .logo {
-  padding: 1rem;
   &:hover {
     cursor: pointer;
     .logo-icon {
@@ -24,7 +23,7 @@
     width: 3vw;
     height: 3vw;
     object-fit: contain;
-    padding: .2rem;
+    padding: .05rem;
     border-radius: 50%;
     min-height: 32px;
     min-width: 32px;

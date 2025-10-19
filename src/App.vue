@@ -1,6 +1,6 @@
 <template>
 <div class="layout w-full h-full">
-  <aside class="line-color-2">
+  <aside class="line-color-2 h-full">
     <Logo />
     <AsideMenu class="aside-menu"/>
   </aside>
@@ -26,9 +26,10 @@ import FuFooter from '@/layout/FuFooter/index.vue'
 .layout {
   display: grid;
   grid-template-areas: "navigation main";
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 2rem 1fr;
   transition: 1s;
   overflow-x: hidden;
+
   aside {
     grid-area: navigation;
     transition: 1s;
@@ -51,19 +52,19 @@ import FuFooter from '@/layout/FuFooter/index.vue'
     
     box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .2);
 
-    $footerHeight: 10rem;
+    $footerHeight: 1.6rem;
     $contentHeight: calc(100vw - $footerHeight);
     .content {
-      padding: 1rem .5rem;
+      padding: .2rem .1rem;
       height: $contentHeight;
       max-height: $contentHeight;
-      min-height: 40rem;
+      // min-height: 40rem;
       overflow-y: auto;
     }
 
     .footer {
       height: $footerHeight;
-      box-shadow: 0 .2rem .5rem var(--shadow);
+      // box-shadow: 0 .2rem .5rem var(--shadow);
     }
   }
 }

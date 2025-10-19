@@ -3,11 +3,6 @@ import { createPinia } from 'pinia'
 
 import './assets/style/fu.scss';
 import './assets/style/glob.scss';
-import '@fu-css/fu-css/dist/index.min.css';
-
-import '@fu-css/fu-size/style.min.css';
-import '@fu-css/fu-scrollbar/style.min.css';
-import '@fu-css/fu-table-theme/style.min.css';
 
 // icon
 import 'remixicon/fonts/remixicon.css';
@@ -31,24 +26,10 @@ import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard' // 复制功�
 import App from './App.vue'
 import Router from './router/index'
 
-// 组件
-import FuCode from './components/FuCode/index.vue';
-import FuQuote from './components/FuQuote/index.vue';
-import FuNote from './components/FuNote/index.vue';
-import FuLineCode from './components/FuLineCode/index.vue';
-
-// 指令
-import ToggleSubmenu from './directives/toggleSubmenu'
-
 const app = createApp(App)
 
-app.use(Router).use(createPinia())
+const pinia = createPinia();
 
-app.component('FuCode', FuCode)                 // 代码块
-    .component('FuNote', FuNote)                // 注释
-    .component('FuQuote', FuQuote)              // 引用块
-    .component('FuLineCode', FuLineCode);       //  行代码
-
-app.directive('toggle-submenu', ToggleSubmenu)
+app.use(Router).use(pinia)
 
 app.mount('#app')

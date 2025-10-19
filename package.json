@@ -9,10 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fu-css/fu-css": "^0.0.4",
-    "@fu-css/fu-scrollbar": "^0.0.1",
-    "@fu-css/fu-size": "^0.0.1",
-    "@fu-css/fu-table-theme": "^0.0.1",
     "gsap": "^3.13.0",
     "pinia": "^3.0.3",
     "prismjs": "^1.30.0",

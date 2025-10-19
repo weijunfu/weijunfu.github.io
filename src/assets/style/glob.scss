@@ -5,6 +5,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hack:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+@font-face {
+    font-family: 'rbt-b';
+    src: url('@/assets/fonts/RobotoMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rbt-m';
+    src: url('@/assets/fonts/RobotoMono-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rbt-r';
+    src: url('@/assets/fonts/RobotoMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.rbt-b { font-family: 'rbt-b'; }
+.rbt-m { font-family: 'rbt-m'; }
+.rbt-r { font-family: 'rbt-r'; }
+
 /* 启用连字 */
 .code-block {
     font-variant-ligatures: common-ligatures;
@@ -22,7 +47,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    --font-family: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', 'Cascadia Code', 'Hack', 'Courier New', Courier, monospace;
+    --font-family: 'rbt-m', 'JetBrains Mono', 'Source Code Pro', 'Cascadia Code', 'Hack', 'Courier New', Courier, monospace;
     --font-size-title: 1.4rem;
     --font-size-subtitle: 1.2rem;
 }
@@ -40,6 +65,10 @@
     font-family: var(--font-family);
 }
 
+html {
+    font-size: clamp(32px, 4vw, 100px); /* 1rem = 100px */
+}
+
 body {
     margin: 0;
     display: flex;
@@ -47,10 +76,10 @@ body {
     width: 100vw;
     height: 100vh;
     min-width: 320px;
-    min-height: 800px;
     color: var(--text-color);
     background-color: var(--background-color);
     border-color: var(--border-color);
+    
 }
 
 #app {
@@ -59,35 +88,9 @@ body {
     height: 100%;
     text-align: left;
     background-color: var(--background-color);
-    // background: repeating-linear-gradient(135deg,#00dc82 0,#ff9e6d 50%,#ff6b35);
+    font-size: .14rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    padding: .3rem .4rem;
-    color: var(--text-color);
-    text-align: left;
-}
-
-h1 {
-    font-size: var(--font-size-title);
-}
-
-h2 {
-    margin: 1rem auto;
-    position: relative;
-    padding-left: 1.5rem;
-    font-size: var(--font-size-subtitle);
-    
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -0.1rem;
-        width: 100%;
-        height: .1rem;
-        background: var(--border-color)
-    }
-}
 
 a {
     font-weight: 500;
@@ -99,58 +102,10 @@ a {
     }
 }
 
-.line-code {
-    padding: .2rem .5rem;
-    background-color: var(--border-color);
-}
-
-dl {
-    padding: .5rem;
-    
-    dt {
-        font-weight: bold;
-    }
-
-    dt + dd {
-        margin-top: 1rem;
-    }
-    dd {
-        code {
-            background-color: var(--border-color);
-        }
-    }
-    dd + dd {
-        margin-top: 1rem;
-    }
-}
-
-ul {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    li {
-        margin-left: 2rem;
-    }
-}
-
-.fu-card {
-    margin: 2rem;
-}
-
 .h-full {
     height: 100%;
 }
 
-.p2 {
-    padding: 2rem;
-}
-
-.pl-1 {
-    padding-left: 1rem;
-}
-
-.ml-1 {
-    margin-left: 1rem;
-}
 
 .grid {
     display: grid;
@@ -171,6 +126,22 @@ $grid-number: 2, 3, 4, 5, 6;
 
 .fu-note {
     & + & {
-        margin-top: 1rem;
+        margin-top: .2rem;
     }
+}
+
+h1 {
+    font-size: .2rem;
+}
+
+h2 {
+    font-size: .18rem;
+}
+
+h3 {
+    font-size: .16rem;
+}
+
+h4 {
+    font-size: .14rem;
 }

@@ -1,5 +1,7 @@
 <template>
-<h2>CSS</h2>
+<div class="typescript">
+    <h2>TypeScript</h2>
+</div>
 </template>
 <script setup lang="ts">
 

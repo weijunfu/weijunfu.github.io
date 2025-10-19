@@ -1,36 +1,31 @@
 <template>
 <div class="aside__wrapper">
     <div class="menu aside-menu flex flex-column">
-        <div class="menu-item flex flex-column justify-center" v-for="item in list" :key="item.id">
-            <div :to="item.url" 
-                :class="['item-title flex items-center justify-between pl-1 link-size hover', currentRootMenu?.id === item.id ? 'active':'']" 
-                @click="handleRootMenu(item, item.url)"
-            >
-                <span> <i v-if="item.icon" :class="[item.icon]"></i>  {{ item.title }}</span>
-                <span>{{ (item.children && item.id === currentRootMenu?.id) ? '-' : (item.children ? '+':'') }}</span>
+        <div class="menu-item flex flex-column" v-for="item in menu" :key="item.path" @click="handleClick(item)">
+            <div class="menu-item-title flex flex-row">
+                <div class="menu-left flex flex-row">
+                    <div class="menu-icon">
+                        <i v-if="item.icon" :class="item.icon"></i>
+                    </div>
+                    <div class="menu-title">{{  item.name }}</div>
+                </div>
+                <div class="menu-quota">
+                    <template v-if="item.children?.length > 0">
+                        <i v-if="item.unfold" class="ri-add-line"></i>
+                        <i v-else class="ri-subtract-line"></i>
+                    </template>
+                </div>
             </div>
-            <div v-show="item.children && item.id === currentRootMenu?.id" :class="['menu-children']">
-                <div class="menu-item flex flex-column items-center hover" v-for="(child) in item.children" :key="child.id">
-                    <div :to="child.url"   
-                        :class="['item-title w-full flex items-center pl-2 link-size', currentSecondMenu?.id === child.id ? 'active': '']"
-                        @click="handleSecondMenu(child, child.url)"
-                    >
-                        <span>{{ child.title }}</span>
-                        <span>{{ (child.children && child.id === currentSecondMenu?.id) ? '-' : (child.children ? '+':'') }}</span>
+            <div v-if="item.children" :class="['menu-item-child', item.unfold ? 'unfold' : 'fold']" v-for="child in item.children" @click.stop="handleChildMenu(child)">
+                <div class="menu-item-title flex flex-row">
+                    <div class="menu-icon">
+                        <i v-if="child.icon" :class="child.icon"></i>
                     </div>
-                    <div v-show="child.children && child.id === currentSecondMenu?.id" :class="['menu-children', 'sub-menu-child', 'w-full']">
-                        <div class="menu-item flex flex-row items-center w-full hover" v-for="childItem in child.children" :key="childItem.id">
-                            <div :to="childItem.url" 
-                                :class="['item-title w-full flex items-center pl-2 link-size', currentThirdMenu?.id === childItem.id ? 'active' : '']"
-                                @click="handleThirdMenu(childItem, childItem.url)"
-                            >
-                                {{ childItem.title }}
-                            </div>
-                        </div>
-                    </div>
+                    <div class="menu-title">{{  child.name }}</div>
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="menu-tools">
@@ -50,148 +45,46 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
+import { useMenuStore } from '@/stores/useMenuStore'
+
+const menuStore = useMenuStore()
+menuStore.init()
+
 import FuTheme from '@/components/FuTheme/index.vue';
+import type { Menu } from '@/types/menu'
 
 const router = useRouter()
 
-interface Menu {
-    id: string | number
-    icon?: string
-    title: string
-    children?: Menu[]
-    url: string,
-    expand?: boolean
-}
+const menu = menuStore.getMenu()
+console.log('menu', menu)
 
-const list = ref<Menu[]>([
-    {
-        id: 0,
-        icon: 'ri-home-4-line',
-        title: 'Home',
-        url: '/'
-    },
-    {
-        id: 1, 
-        icon: 'ri-java-line',
-        title: 'Java', 
-        url: '/java/index',
-        children: [
-            {
-                id: 11,
-                title: 'Linux部署',
-                url: '/java/linux'
-            }
-        ]
-    }, 
-    {
-        id: 2, 
-        icon: 'ri-global-line',
-        title: 'Web',
-        url: '/web',
-        expand: false,
-        children: [
-            {
-                id: 21, title: 'HTML', url: '/web/html'
-            },
-            {
-                id: 22, title: 'CSS', url: '/web/css',
-            }, 
-            {
-                id: 23, title: 'JavaScript', url: '/web/js',
-                children: [
-                    {
-                        id: 231, title: 'GSAP', url: '/web/js/gsap'
-                    },{
-                        id: 232, title: 'GSAP-ScrollTrigger', url: '/web/js/ScrollTrigger'
-                    }
-                ]
-            },
-            {
-                id: 24, title: 'TypeScript', url: '/web/ts'
-            }, {
-                id: 25, title: 'Vue', url: '/web/vue'
-            }, {
-                id: 26, 
-                title: 'Tools', 
-                url: '/web/tools/pnpm', 
-                children: [
-                    {
-                        id: 261, title: 'PNPM', url: '/web/tools/pnpm',
-                    }
-                ]
-            }
-        ]
-    }, {
-        id: 3,
-        icon: 'ri-database-2-line',
-        title: 'Database',
-        url: '/db',
-        expand: false,
-        children: [
-            {
-                id: '31', title: 'MySQL', url: '/db/mysql'
-            }, {
-                id: '32', title: 'Redis', url: '/db/redis'
-            }
-        ]
-    }, {
-        id: 4,
-        icon: 'ri-tools-line',
-        title: 'Tools',
-        url: '/tools',
-        expand: false,
-        children: [
-            {
-                id: '40', title: 'Editor', url: '/tools/editor/markdown', children: [
-                    {
-                        id: '401', title: 'Markdown', url: '/tools/editor/markdown'
-                    }
-                ]
-            },
-            {
-                id: '41', title: 'Docker', url: '/tools/docker'
-            }, 
-            {
-                id: '42', title: 'Fu CSS', url: '/tools/fu'
-            }, {
-                id: '43', title: 'Fu Size', url: '/tools/fu-size'
-            }, {
-                id: '44', title: 'Fu Table Theme', url: '/tools/fu-table-theme'
-            }
-        ]
-    }
-])
+const currentMenu = ref<Menu | null>(null)
 
-function open(url: string) {
-    if(url) {
+function handleClick(item: Menu) {
+    currentMenu.value = item
+    
+    menu.forEach(e => {
+        if(e.path === item.path) {
+            e.unfold = !e.unfold
+        } else {
+            e.unfold = true
+        }
+    })
+
+    if(item.path) {
         router.push({
-            path: url,
-            query: {
-                _t: Date.now()
-            }
+            path: item.path
         })
     }
 }
 
-const currentRootMenu = ref<Menu>(list.value[0])
-function handleRootMenu(menu: Menu, url: string) {
-    currentRootMenu.value = menu
-
-    open(url)
-}
-
-const currentSecondMenu = ref<Menu>()
-function handleSecondMenu(menu: Menu, url: string) {
-    currentSecondMenu.value = menu
-
-    open(url)
-}
-
-const currentThirdMenu = ref<Menu>()
-function handleThirdMenu(menu: Menu, url: string) {
-    currentThirdMenu.value = menu
-
-    open(url)
+function handleChildMenu(item: Menu) {
+    console.log(item)
+    if(item.path) {
+        router.push({
+            path: item.path
+        })
+    }
 }
 
 </script>
@@ -205,6 +98,46 @@ function handleThirdMenu(menu: Menu, url: string) {
     justify-content: space-between;
     width: 100%;
     height: 100%;
+    transition: all .4s;
+
+    .aside-menu {
+        height: calc(100% - 10vh);
+
+        .menu-item {
+            padding-top: .1rem;
+            font-size: .18rem;
+            &-title {
+                justify-content: space-between;
+                .menu-icon {
+                    width: .2rem;
+                }
+                .menu-title {
+                    padding-left: .05rem;
+                }
+            }
+
+            .unfold {
+                display: none;
+            }
+
+            .fold {
+                display: block;
+            }
+
+            &-child {
+                padding-top: .1rem;
+                font-size: .16rem;
+                padding-left: .05rem;
+                .menu-item-title {
+                    justify-content: flex-start;
+                }
+
+                &:last-child {
+                    padding-bottom: .2rem;
+                }
+            }
+        }
+    } 
 
     .menu-tools {
         width: 100%;
@@ -213,53 +146,15 @@ function handleThirdMenu(menu: Menu, url: string) {
         justify-content: center;
         align-items: center;
         color: var(--text-color);
-        font-size: 1.2rem;
-        
+        font-size: .2rem;
+
         .tool-menu {
-            padding: 1rem 2rem;
+            margin-left: .1rem;
             &:first-child {
                 margin-left: 0;
             }
         }
     }
 }
-.aside-menu {
-    height: calc(100% - 10vh);
-    .menu-item {
-        transition: .5s; 
-        .item-title {
-            padding: .5rem 1rem;
-            &:hover {
-                cursor: pointer;
-            }
 
-            span {
-                &:nth-child(2) {
-                    color: var(--text-color);
-                }
-            }
-
-            span + span {
-                margin-left: 1rem;
-            }
-        }
-
-        .menu-children {
-            transition: 1s;
-            .menu-item {
-                .item-title {
-                    padding: .5rem 1rem .5rem 2rem;
-                }
-
-                .sub-menu-child {
-                    .menu-item {
-                        .item-title {
-                            padding: .5rem 1rem .5rem 3rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 </style>

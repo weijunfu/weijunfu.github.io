@@ -1,138 +1,67 @@
-import { createWebHistory, createRouter } from 'vue-router'
+import type { Component } from 'vue';
+import { createWebHistory, createRouter, type RouteRecordRaw } from 'vue-router'
+import type { MenuMeta } from '@/types/menu';
 
-const routes = [
-    { path: '/', name: 'Home', component: () => import('@/views/index.vue') },
-    { 
-        path: '/java', 
-        name: 'Java', 
-        redirect: '/java/index',
-        children: [
-            {
-                path: 'index',
-                name: 'JavaHome',
-                component: () => import('@/views/Java/index.vue')
-            },
-            {
-                path: 'linux',
-                name: 'LinuxDeploy',
-                component: () => import('@/views/Java/LinuxDeploy/index.vue')
+// 读取所有vue文件
+const modules = import.meta.glob<{ default: Component }>('@/views/**/*.vue');
+
+const menuMetas = import.meta.glob<{ default: MenuMeta }>('@/views/**/index.meta.ts', { eager: true });
+
+function toMetaPath(viewPath: string) {
+    return viewPath.replace(/\.vue$/, '.meta.ts');
+}
+
+// 生成路由
+// modules 是一个对象，key 是文件路径，value 是模块内容
+function generateRoutes() {
+    const routes: RouteRecordRaw[] = [];
+    // const menu: Menu[] = [];
+
+    routes.push({
+        path: '/', name: '_', redirect: '/home', meta: { title: 'Home', seq: 0, icon: 'ri-home-4-line', }
+    })
+
+    for(const path in modules) {
+        const routePath = path.replace('/src/views', '').replace('/index.vue', '').replace(/\/{2,}/g, '/').toLowerCase()
+
+        // meta
+        const metaPath =  toMetaPath(path);
+        const menuMeta = menuMetas[metaPath].default
+/* 
+        menu.push({
+            path: routePath,
+            title: menuMeta.title,
+            icon: menuMeta.icon,
+            seq: menuMeta.order,
+            children: []
+        }) */
+
+        routes.push({
+            path: routePath,
+            name: menuMeta.title,
+            component: modules[path]().then(m => m.default),
+            meta: {
+                title: menuMeta.title,
+                icon: menuMeta.icon as string,
+                seq: menuMeta.order
             }
-        ]
-    },
-    { 
-        path: '/web', 
-        name: 'Web', 
-        redirect: '/web/html',
-        children: [
-            {
-                path: 'html', name: 'HTML', component: () => import('@/views/web/html/index.vue')
-            },{
-                path: 'css', name: 'CSS', component: () => import('@/views/web/css/index.vue')
-            },{
-                path: 'js', 
-                name: 'JavaScript', 
-                redirect: '/web/js/index',
-                children: [
-                    {
-                        path: 'index', name: 'JavaScriptHome', component: () => import('@/views/web/javascript/index.vue'),
-                    },
-                    {
-                        path: 'gsap', name: 'GSAP', component: () => import('@/module/web/javascript/animation/index.vue')
-                    },
-                    {
-                        path: 'ScrollTrigger', name: 'ScrollTrigger', component: () => import('@/module/web/javascript/gsap/GsapScrollTrigger.vue')
-                    }
-                ]
-            }, {
-                path: 'ts', name: 'TypeScript', component: () => import('@/views/web/typescript/index.vue')
-            }, {
-                path: 'vue', name: 'Vue', component: () => import('@/views/web/vue/index.vue')
-            }, {
-                path: 'tools', 
-                name: 'WebTools',
-                redirect: '/web/tools/pnpm',
-                children: [
-                    {
-                        path: 'pnpm', name: 'PNPM', component: () => import('@/views/web/tools/pnpm/index.vue')
-                    }
-                ]
-            }
-    ] },
-    {
-        path: '/db',
-        name: 'Database',
-        redirect: '/db/mysql',
-        children: [
-            {
-                path: 'mysql', name: 'MySQL', component: () => import('@/views/database/mysql/index.vue')
-            }, {
-                path: 'redis', name: 'Redis', component: () => import('@/views/database/redis/index.vue')
-            }
-        ]
-    },{
-        path: '/tools',
-        name: 'Tools',
-        redirect: '/tools/docker',
-        children: [
-            {
-                path: 'editor', name: 'Editor', redirect: '/tools/editor/markdown', children: [
-                    {
-                        path: 'markdown', name: 'Markdown', component: () => import('@/views/tools/editor/Markdown/index.vue')
-                    }
-                ]
-            },
-            {
-                path: 'docker', name: 'Docker', component: () => import('@/views/tools/docker/index.vue')
-            },
-            {
-                path: 'fu', 
-                name: 'FuCSS', 
-                redirect: '/tools/fu/color',
-                component: () => import('@/views/tools/fucss/index.vue'),
-                children: [
-                    {
-                        path: 'color',
-                        name: 'FuCssColor',
-                        component: () => import('@/views/tools/fucss/color/index.vue')
-                    },
-                    {
-                        path: 'svg',
-                        name: 'FuCssSvg',
-                        redirect: '/tools/fu/svg/fill',
-                        component: () => import('@/views/tools/fucss/svg/index.vue'),
-                        children: [
-                            {
-                                path: 'fill',
-                                name: 'SVGFill',
-                                component: () => import('@/views/tools/fucss/svg/fill/index.vue')
-                            },
-                            {
-                                path: 'stroke',
-                                name: 'SVGStroke',
-                                component: () => import('@/views/tools/fucss/svg/stroke/index.vue')
-                            },
-                            {
-                                path: 'width',
-                                name: 'SVGStrokeWidth',
-                                component: () => import('@/views/tools/fucss/svg/stroke-width/index.vue')
-                            }
-                        ]
-                    },
-                ]
-            }, 
-            {
-                path: 'fu-size',
-                name: 'FuSize',
-                component: () => import('@/views/tools/fusize/index.vue')
-            },
-            {
-                path: 'fu-table-theme',
-                name: 'FuTableTheme',
-                component: () => import('@/views/tools/fuTableTheme/index.vue')
-            }
-        ]
+        })
     }
-]
+
+    /* const childrenList = menu.filter(e => e.path.split('/').filter(Boolean).length > 1).sort((a, b) => a.seq - b.seq)
+    const menuTree = menu.filter(e => e.path.split('/').filter(Boolean).length === 1).sort((a, b) => a.seq - b.seq).map(e => {
+        const children = childrenList.filter(m => m.path.startsWith(e.path))
+        e.children = children || []
+        e.unfold = true
+        return e
+    }) */
+    
+    return {
+        routes
+    }
+}
+
+const { routes } = generateRoutes();
 
 const router = createRouter({
     history: createWebHistory(),
