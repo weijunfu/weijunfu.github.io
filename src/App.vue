@@ -48,7 +48,8 @@ import FuFooter from '@/layout/FuFooter/index.vue'
 
   main {
     grid-area: main;
-    max-height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     
     box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .2);
 

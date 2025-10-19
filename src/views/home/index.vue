@@ -1,5 +1,5 @@
 <template>
-<div class="home w-full h-full">
+<div class="home w-full h-full flex flex-row flex-wrap">
     <CategoryCard :data="item" v-for="item in categoryList" :key="item.id"/>
 </div>
 </template>
@@ -28,8 +28,6 @@ const categoryList = ref<Category[]>([
 <style scoped lang="scss">
 .home {
     margin: 1rem auto;
- display: grid;
- grid-template-columns: repeat(5, 1fr);
  gap: .2rem .1rem;
 }
 </style>
