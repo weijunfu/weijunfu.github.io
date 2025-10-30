@@ -26,10 +26,13 @@ import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard' // 复制功�
 import App from './App.vue'
 import Router from './router/index'
 
+import FuCode from '@/components/code/FuCode/index.vue';
+
+
 const app = createApp(App)
 
 const pinia = createPinia();
 
-app.use(Router).use(pinia)
+app.use(Router).use(pinia).component('fu-code', FuCode)
 
 app.mount('#app')
