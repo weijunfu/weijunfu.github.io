@@ -46,8 +46,11 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 import { useMenuStore } from '@/stores/useMenuStore'
+import { useMobileMenuStore } from '@/stores/useMobileMenuStore'
 
 const menuStore = useMenuStore()
+const mobileMenuStore = useMobileMenuStore()
+
 menuStore.init()
 
 import FuTheme from '@/components/FuTheme/index.vue';
@@ -60,6 +63,9 @@ const menu = menuStore.getMenu()
 const currentMenu = ref<Menu | null>(null)
 
 function handleClick(item: Menu) {
+
+    const flag = item.unfold
+
     currentMenu.value = item
     
     menu.forEach(e => {
@@ -70,7 +76,9 @@ function handleClick(item: Menu) {
         }
     })
 
-    if(item.path) {
+    if(!flag) {
+        mobileMenuStore.toggle()
+
         router.push({
             path: item.path
         })
@@ -78,7 +86,10 @@ function handleClick(item: Menu) {
 }
 
 function handleChildMenu(item: Menu) {
+    console.log('child menu', item)
+
     if(item.path) {
+        mobileMenuStore.toggle()
         router.push({
             path: item.path
         })
@@ -88,7 +99,7 @@ function handleChildMenu(item: Menu) {
 </script>
 
 <style scoped lang="scss">
-@use "sass:color";
+
 .aside__wrapper {
     display: flex;
     flex-direction: column;
@@ -102,7 +113,7 @@ function handleChildMenu(item: Menu) {
         height: calc(100% - 10vh);
 
         .menu-item {
-            padding-top: .1rem;
+            margin-top: .1rem;
             font-size: .18rem;
             &-title {
                 justify-content: space-between;
@@ -123,7 +134,7 @@ function handleChildMenu(item: Menu) {
             }
 
             &-child {
-                padding-top: .1rem;
+                margin-top: .1rem;
                 font-size: .16rem;
                 padding-left: .05rem;
                 .menu-item-title {

@@ -27,14 +27,6 @@ function generateRoutes() {
         // meta
         const metaPath =  toMetaPath(path);
         const menuMeta = menuMetas[metaPath].default
-/* 
-        menu.push({
-            path: routePath,
-            title: menuMeta.title,
-            icon: menuMeta.icon,
-            seq: menuMeta.order,
-            children: []
-        }) */
 
         routes.push({
             path: routePath,
@@ -48,14 +40,6 @@ function generateRoutes() {
         })
     }
 
-    /* const childrenList = menu.filter(e => e.path.split('/').filter(Boolean).length > 1).sort((a, b) => a.seq - b.seq)
-    const menuTree = menu.filter(e => e.path.split('/').filter(Boolean).length === 1).sort((a, b) => a.seq - b.seq).map(e => {
-        const children = childrenList.filter(m => m.path.startsWith(e.path))
-        e.children = children || []
-        e.unfold = true
-        return e
-    }) */
-    
     return {
         routes
     }

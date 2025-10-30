@@ -1,7 +1,7 @@
 <template>
   <section>
     <h2>Font Size</h2>
-    <div class="font-size flex flex-row">
+    <div class="font-size flex flex-row flex-wrap">
       <FontSizeCard v-for="item in fontSizeCardList" :key="item.id" :data="item" />
     </div>
   </section>
@@ -25,6 +25,7 @@ const fontSizeCardList = ref<IFontSizeCard[]>([
 .font-size {
   margin-top: .2rem;
   &-card {
+    margin-top: .2rem;
     margin-right: .2rem;
   }
 }

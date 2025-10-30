@@ -1,5 +1,5 @@
 <template>
-<div class="logo flex flex-center w-full">
+<div class="logo flex flex-center">
   <svg class="logo-icon" version="1.0" xmlns="http://www.w3.org/2000/svg" width="81.000000pt" height="83.000000pt" viewBox="0 0 81.000000 83.000000" preserveAspectRatio="xMidYMid meet">
     <g transform="translate(0.000000,83.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
       <path fill="currentColor" d="M380 693 c-67 -10 -72 -13 -59 -29 10 -13 27 -14 93 -9 45 4 83 8 85 10 2 2 1 11 -2 20 -6 15 -54 18 -117 8z"/>
