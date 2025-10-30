@@ -1,0 +1,1 @@
+import{_ as a,c as s,a as o,o as t}from"./index-CGz3O9eD.js";const n={},c={class:"java"};function r(_,e){return t(),s("div",c,[...e[0]||(e[0]=[o("h2",null,"Java",-1)])])}const l=a(n,[["render",r]]);export{l as default};
