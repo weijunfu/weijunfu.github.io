@@ -49,13 +49,15 @@ defineProps({
     border-color: var(--theme);
 
     .top {
+      color: var(--theme);
       .flag {
         border-color: var(--theme);
         background-color: var(--theme);
       }
     }
 
-    .center {
+    .center,
+    .bottom {
       color: var(--theme);
     }
   }

@@ -3,7 +3,7 @@
   <nav class="flex flex-row justify-between items-center medium">
     <i :class="[active ? 'ri-menu-3-fill' : 'ri-menu-2-fill']" @click="changeMenu"></i>
 
-    <Logo />
+    <Logo class="flex-center" />
   </nav>
   <aside :class="['line-color-2','h-full', active ? 'mobile' : '']">
     <Logo class="w-full" />
