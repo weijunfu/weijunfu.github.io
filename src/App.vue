@@ -17,20 +17,6 @@
 <script setup lang="ts">
 import Logo from '@/components/Logo/index.vue';
 import AsideMenu from '@/layout/AsideMenu/index.vue';
-import FuFooter from '@/layout/FuFooter/index.vue'
-
-import { storeToRefs } from 'pinia'; 
-
-import { useMobileMenuStore } from '@/stores/useMobileMenuStore';
-
-const mobileMenuStore = useMobileMenuStore()
-
-const { active } = storeToRefs(mobileMenuStore)
-
-function changeMenu() {
-  mobileMenuStore.toggle()
-}
-
 </script>
 
 <style scoped lang="scss">
