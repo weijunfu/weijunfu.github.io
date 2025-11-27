@@ -30,7 +30,7 @@ jobs:
       run: npm install -g pnpm
 
     - name: Install dependencies
-      run: pnpm install  # 或 pnpm ci（推荐用于CI）
+      run: pnpm install
 
     - name: Build project
       run: pnpm run build
