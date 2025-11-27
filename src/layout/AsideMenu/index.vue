@@ -64,8 +64,6 @@ const currentMenu = ref<Menu | null>(null)
 
 function handleClick(item: Menu) {
 
-    const flag = item.unfold
-
     currentMenu.value = item
     
     menu.forEach(e => {
