@@ -11,7 +11,6 @@
   "dependencies": {
     "gsap": "^3.13.0",
     "pinia": "^3.0.3",
-    "prismjs": "^1.30.0",
     "remixicon": "^4.6.0",
     "sass": "^1.93.2",
     "vue": "^3.5.18",
@@ -21,9 +20,14 @@
     "@types/node": "^24.3.0",
     "@types/prismjs": "^1.26.5",
     "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/compiler-sfc": "^3.5.25",
     "@vue/tsconfig": "^0.7.0",
+    "@yankeeinlondon/code-builder": "^1.2.1",
+    "@yankeeinlondon/link-builder": "^1.2.1",
+    "@yankeeinlondon/meta-builder": "^1.4.0",
     "typescript": "~5.8.3",
     "vite": "^7.1.2",
+    "vite-plugin-md": "^0.21.5",
     "vue-tsc": "^3.0.5"
   }
 }

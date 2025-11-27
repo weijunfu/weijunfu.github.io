@@ -1,0 +1,68 @@
+:root {
+  --md-bg-color: rgba(232, 245, 233, 0.6);   /* 淡青绿 */
+}
+.markdown-body {
+  width: 100%;
+
+  h1 { font-size: 0.30rem; } /* 或 30px */
+  h2 { font-size: 0.28rem; } /* 或 28px */
+  h3 { font-size: 0.24rem; } /* 或 24px */
+  h4 { font-size: 0.20rem; } /* 或 20px */
+  h5 { font-size: 0.18rem; } /* 或 18px */
+  h6 { font-size: 0.16rem; } /* 或 16px */
+
+  blockquote {
+    padding: .1rem;
+    background-color: var(--md-bg-color);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: .04rem;
+      height: 100%;
+      background-color: rgba(243, 229, 245, 0.6); /* 浅薰衣草 */
+    }
+  }
+
+  p {
+    margin-top: 0.1rem;
+  }
+
+  strong {
+    font-weight: 900; /* 更重的加粗 */
+    color: #E63946; /* 海洋蓝绿色 */
+    background-color: var(--md-bg-color); 
+    padding: 0.02rem 0.05rem; /* 内边距 */
+    border-radius: 0.03rem; /* 圆角 */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* 文本阴影 */
+    font-style: italic; /* 斜体 */
+  }
+
+  .code-wrapper {
+    margin: .1rem 0;
+    padding: .1rem;
+    border-radius: 0%;
+    background-color: var(--md-bg-color);
+  }
+
+  code {
+    padding: .02rem .1rem;
+    background-color: var(--md-bg-color);
+  }
+
+  table, th, td {
+    border: 0.01rem solid #f0f0f0;
+  }
+
+  table {
+    margin-top: .1rem;
+    border-collapse: collapse; /* 合并边框 */
+
+    th, td {
+      padding: 0.02rem 0.05rem;
+    }
+  }
+}

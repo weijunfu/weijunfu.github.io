@@ -1,8 +1,8 @@
 <template>
 <div class="aside__wrapper">
     <div class="menu aside-menu flex flex-column">
-        <div class="menu-item flex flex-column" v-for="item in menu" :key="item.path" @click="handleClick(item)">
-            <div class="menu-item-title flex flex-row">
+        <div class="menu-item flex flex-column" v-for="item in menu" :key="item.path">
+            <div class="menu-item-title flex flex-row" @click="handleClick(item)">
                 <div class="menu-left flex flex-row">
                     <div class="menu-icon">
                         <i v-if="item.icon" :class="item.icon"></i>
@@ -16,8 +16,8 @@
                     </template>
                 </div>
             </div>
-            <div v-if="item.children" :class="['menu-item-child', item.unfold ? 'unfold' : 'fold']" v-for="child in item.children" @click.stop="handleChildMenu(child)">
-                <div class="menu-item-title flex flex-row">
+            <div v-if="item.children" :class="['menu-item-child', item.unfold ? 'unfold' : 'fold']" v-for="child in item.children">
+                <div class="menu-item-title flex flex-row" @click.stop="handleChildMenu(child)">
                     <div class="menu-icon">
                         <i v-if="child.icon" :class="child.icon"></i>
                     </div>
@@ -76,13 +76,14 @@ function handleClick(item: Menu) {
         }
     })
 
-    if(!flag) {
-        mobileMenuStore.toggle()
+    mobileMenuStore.toggle()
 
-        router.push({
-            path: item.path
-        })
-    }
+    router.push({
+        path: item.path,
+        query: {
+            _t: Date.now()
+        }
+    })
 }
 
 function handleChildMenu(item: Menu) {
@@ -91,7 +92,10 @@ function handleChildMenu(item: Menu) {
     if(item.path) {
         mobileMenuStore.toggle()
         router.push({
-            path: item.path
+            path: item.path,
+            query: {
+                _t: Date.now()
+            }
         })
     }
 }
@@ -99,6 +103,16 @@ function handleChildMenu(item: Menu) {
 </script>
 
 <style scoped lang="scss">
+
+:deep(.menu-item-title) {
+    &:hover {
+        cursor: pointer;
+
+        .menu-title {
+            text-decoration: underline;
+        }
+    }
+}
 
 .aside__wrapper {
     display: flex;

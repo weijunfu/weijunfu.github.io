@@ -1,11 +1,22 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import Vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
+import Markdown from 'vite-plugin-md'
+import Code from '@yankeeinlondon/code-builder'
+import Link from '@yankeeinlondon/link-builder'
+import Meta from '@yankeeinlondon/meta-builder'
 
 // https://vite.dev/config/
 export default defineConfig({
   base: '/',
-  plugins: [vue()],
+  plugins: [
+    Vue({
+      include: [/\.vue$/, /\.md$/], // <--
+    }),
+    Markdown({
+      builders: [Code(), Link(), Meta()]
+    })
+  ],
   css: {
     preprocessorOptions: {
       scss: {
