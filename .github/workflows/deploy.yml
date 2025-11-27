@@ -21,20 +21,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-      with:
-        submodules: true
-        token: ${{ secrets.DEPLOY }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        cache: 'pnpm'
 
     - name: Install pnpm
       run: npm install -g pnpm
 
     - name: Install dependencies
-      run: pnpm install  # 或 pnpm ci（推荐用于CI）
+      run: pnpm ci  # 或 pnpm ci（推荐用于CI）
 
     - name: Build project
       run: pnpm run build
