@@ -5,6 +5,7 @@ import Markdown from 'vite-plugin-md'
 import Code from '@yankeeinlondon/code-builder'
 import Link from '@yankeeinlondon/link-builder'
 import Meta from '@yankeeinlondon/meta-builder'
+import markdownItKatex from '@traptitech/markdown-it-katex'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -14,7 +15,18 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/], // <--
     }),
     Markdown({
-      builders: [Code(), Link(), Meta()]
+      builders: [Code(), Link(), Meta()],
+      markdownItOptions: {
+        html: true,
+        linkify: true,
+        typographer: true,
+      },
+      markdownItSetup(md) {
+        // 启用 KaTeX 支持
+        md.use(markdownItKatex, {
+          // 可选配置，比如 throwOnError: false
+        })
+      }
     })
   ],
   css: {

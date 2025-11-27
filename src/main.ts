@@ -6,6 +6,9 @@ import './assets/style/glob.scss';
 import './assets/style/md.scss';
 import './assets/style/ani.scss';
 
+// md 数学公式
+import 'katex/dist/katex.min.css'
+
 // icon
 import 'remixicon/fonts/remixicon.css';
 

@@ -1,5 +1,7 @@
 <template>
-<ReadMe />
+<div class="editor-markdown w-full h-full">
+  <ReadMe />
+</div>
 </template>
 <script setup lang="ts">
 import ReadMe from '@/module/editor/markdown/readme.md';
