@@ -21,6 +21,12 @@ const totalNum = ref(20)
   perspective: 400px;           // 设置3d
   transform-style: preserve-3d; // 开启3d
 
+  &:hover {
+    .ele {
+      animation-play-state: paused;
+    }
+  }
+
   .ele {
     position: relative;
     width: 1px;
