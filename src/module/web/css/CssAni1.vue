@@ -6,7 +6,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const totalNum = 20
+const totalNum = ref(20)
 
 </script>
 <style scoped lang="scss">
