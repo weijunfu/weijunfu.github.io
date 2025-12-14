@@ -1,5 +1,6 @@
 <template>
-<div class="box">
+<div class="box1 box">
+  <h2>双螺旋动画</h2>
   <div v-for="item in totalNum" :key="item" class="ele" :style="{'--i': item}"></div>
 </div>
 </template>
@@ -15,7 +16,7 @@ const totalNum = ref(20)
     transform: none;
   }
 }
-.box {
+.box1 {
   width: 360px;
   height: 70px;
   perspective: 400px;           // 设置3d
