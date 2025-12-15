@@ -180,3 +180,47 @@ ul {
 .extreme {
     font-size: .24rem;
 }
+
+/* 流光特效 */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.streamer {
+    position: relative;
+    padding: 5px;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        height: 105%;
+        width: 105%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        padding: 3px;
+        border-radius: 5px;
+        background-image: conic-gradient(from var(--angle), transparent 0deg, blue 90deg, transparent 180deg, red 270deg, transparent 360deg);
+        animation: rotate 3s linear infinite;
+    }
+
+    &::before {
+        filter: blur(.2em);
+        opacity: 0.5;
+    }
+
+    &::after {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
